@@ -13,5 +13,10 @@ namespace sdtp
         {
 
         }
+
+        protected void LoginBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
+        }
     }
 }

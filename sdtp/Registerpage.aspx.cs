@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace sdtp
 {
-    public partial class Login : System.Web.UI.Page
+    public partial class Registerpage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -21,7 +21,11 @@ namespace sdtp
 
         protected void LinkButton4_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Registerpage.aspx");
+            Response.Redirect("Login.aspx");
         }
+
+       
+
+       
     }
 }

@@ -39,57 +39,62 @@
   </div>
 
   <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <nav class="main-nav">
-                    <!-- ***** Logo Start ***** -->
-                    <a href="index.aspx" class="logo">
-                        <h1>HOSTELS</h1>
-                    </a>
-                    <!-- ***** Logo End ***** -->
-                    <!-- ***** Menu Start ***** -->
-                     <ul class="nav">
-              <li class="active">
-                   <asp:LinkButton ID="HomePageBtn" Text="Home" runat="server"  />  </asp:LinkedButton>
-                </li>
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.aspx" class="logo">
+                            <h1>HOSTELS</h1>
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="active">
+                                <asp:LinkButton ID="HomePageBtn" Text="Home" runat="server" OnClick="HomePageBtn_Click" />
+                                </asp:LinkedButton>
+                            </li>
 
 
-               <li>
-                    <asp:LinkButton ID="Hostelsbtn" Text="Hostels" runat="server"  />  </asp:LinkedButton>
-               </li>
+                            <li>
+                                <asp:LinkButton ID="Hostelsbtn" Text="Hostels" runat="server" />
+                                </asp:LinkedButton>
+                            </li>
 
-               <li>
-                    <asp:LinkButton ID="LinkButton2" Text="Hostel Details" runat="server"  />  </asp:LinkedButton>
-               </li>
+                            <li>
+                                <asp:LinkButton ID="LinkButton2" Text="Hostel Details" runat="server" />
+                                </asp:LinkedButton>
+                            </li>
 
-              <li>
-                   <asp:LinkButton ID="ContactBtnUs" Text="Contact Us" runat="server"  />  </asp:LinkedButton>
-              </li>
+                            <li>
+                                <asp:LinkButton ID="ContactBtnUs" Text="Contact Us" runat="server" />
+                                </asp:LinkedButton>
+                            </li>
 
-              <li>
-                <asp:LinkButton ID="LogOutBtn" Text="LogOut" runat="server"  />  </asp:LinkedButton>
-             </li>
+                            <li>
+                                <asp:LinkButton ID="LogOutBtn" Text="LogOut" runat="server" />
+                                </asp:LinkedButton>
+                            </li>
 
-            <li>
-                 <asp:LinkButton ID="LinkButton4" runat="server" >
-                    <i class="fa fa-user"></i> Register
-                  </asp:LinkButton>
-           </li>
+                            <li>
+                                <asp:LinkButton ID="LinkButton4" runat="server" OnClick="LinkButton4_Click">
+                                   <i class="fa fa-user"></i> Register
+                                </asp:LinkButton>
+                            </li>
 
 
-    
-            </ul>    
-                    <a class='menu-trigger'>
-                        <span>Menu</span>
-                    </a>
-                    <!-- ***** Menu End ***** -->
-                </nav>
+
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
             </div>
         </div>
-    </div>
-  </header>
+    </header>
   <!-- ***** Header Area End ***** -->
 
   <div class="main-banner">
@@ -136,98 +141,98 @@
         </select>
     </div>
 
-<!-- Admin Login Fields -->
-<div id="adminFields" style="display: none;">
-    <label for="adminUsername">Username:</label>
-    <asp:TextBox runat="server" ID="adminUsername" placeholder="Username"></asp:TextBox>
-    <br>
-    <label for="adminPassword">Password:</label>
-    <asp:TextBox runat="server" ID="adminPassword" TextMode="Password" placeholder="Password"></asp:TextBox>
-    <asp:Button runat="server" ID="adminLoginButton" CssClass="register-btn" Text="Login" OnClientClick="loginbtn(); return false;" />
-    <label for="registerLink">Register as Admin:</label>
-    <a href="register.aspx">Register</a>
-</div>
+            <!-- Admin Login Fields -->
+            <div id="adminFields" style="display: none;">
+                <label for="adminUsername">Username:</label>
+                <asp:TextBox runat="server" ID="adminUsername" placeholder="Username"></asp:TextBox>
+                <br>
+                <label for="adminPassword">Password:</label>
+                <asp:TextBox runat="server" ID="adminPassword" TextMode="Password" placeholder="Password"></asp:TextBox>
+                <asp:Button runat="server" ID="adminLoginButton" CssClass="register-btn" Text="Login" OnClientClick="loginbtn(); return false;" />
+                <label for="registerLink">Register as Admin:</label>
+                <a href="Registerpage.aspx">Register</a>
+            </div>
 
-<!-- Landlord Login Fields -->
-<div id="landlordFields" style="display: none;">
-    <label for="landlordEmail">Email:</label>
-    <asp:TextBox runat="server" ID="landlordEmail" placeholder="Email"></asp:TextBox>
-    <br>
-    <label for="landlordPassword">Password:</label>
-    <asp:TextBox runat="server" ID="landlordPassword" TextMode="Password" placeholder="Password"></asp:TextBox>
-    <asp:Button runat="server" ID="landlordLoginButton" CssClass="register-btn" Text="Login" OnClientClick="loginbtn(); return false;" />
-    <label for="registerLink">Register as Landlord:</label>
-    <a href="register.aspx">Register</a>
-</div>
+            <!-- Landlord Login Fields -->
+            <div id="landlordFields" style="display: none;">
+                <label for="landlordEmail">Email:</label>
+                <asp:TextBox runat="server" ID="landlordEmail" placeholder="Email"></asp:TextBox>
+                <br>
+                <label for="landlordPassword">Password:</label>
+                <asp:TextBox runat="server" ID="landlordPassword" TextMode="Password" placeholder="Password"></asp:TextBox>
+                <asp:Button runat="server" ID="landlordLoginButton" CssClass="register-btn" Text="Login" OnClientClick="loginbtn(); return false;" />
+                <label for="registerLink">Register as Landlord:</label>
+                <a href="Registerpage.aspx">Register</a>
+            </div>
 
-<!-- Warden Login Fields -->
-<div id="wardenFields" style="display: none;">
-    <label for="wardenEmail">Email:</label>
-    <asp:TextBox runat="server" ID="wardenEmail" placeholder="Email"></asp:TextBox>
-    <br>
-    <label for="wardenPassword">Password:</label>
-    <asp:TextBox runat="server" ID="wardenPassword" TextMode="Password" placeholder="Password"></asp:TextBox>
-    <asp:Button runat="server" ID="wardenLoginButton" CssClass="register-btn" Text="Login" OnClientClick="loginbtn(); return false;" />
-    <br>
-    <label for="registerLink">Register as Warden:</label>
-    <a href="register.aspx">Register</a>
-</div>
+            <!-- Warden Login Fields -->
+            <div id="wardenFields" style="display: none;">
+                <label for="wardenEmail">Email:</label>
+                <asp:TextBox runat="server" ID="wardenEmail" placeholder="Email"></asp:TextBox>
+                <br>
+                <label for="wardenPassword">Password:</label>
+                <asp:TextBox runat="server" ID="wardenPassword" TextMode="Password" placeholder="Password"></asp:TextBox>
+                <asp:Button runat="server" ID="wardenLoginButton" CssClass="register-btn" Text="Login" OnClientClick="loginbtn(); return false;" />
+                <br>
+                <label for="registerLink">Register as Warden:</label>
+               <a href="Registerpage.aspx">Register</a>
+            </div>
 
-      <!-- Student Login Fields -->
-<div id="studentFields" style="display: none;">
-    <label for="studentEmail">Email:</label>
-    <asp:TextBox runat="server" ID="TextBox3" placeholder="Email"></asp:TextBox>
-    <br>
-    <label for="studentPassword">Password:</label>
-    <asp:TextBox runat="server" ID="TextBox4" TextMode="Password" placeholder="Password"></asp:TextBox>
-    <asp:Button runat="server" ID="Button2" CssClass="register-btn" Text="Login" OnClientClick="loginbtn(); return false;" />
-    <br>
-    <label for="registerLink">Register as Student:</label>
-    <a href="register.aspx">Register</a>
-</div>
+            <!-- Student Login Fields -->
+            <div id="studentFields" style="display: none;">
+                <label for="studentEmail">Email:</label>
+                <asp:TextBox runat="server" ID="TextBox3" placeholder="Email"></asp:TextBox>
+                <br>
+                <label for="studentPassword">Password:</label>
+                <asp:TextBox runat="server" ID="TextBox4" TextMode="Password" placeholder="Password"></asp:TextBox>
+                <asp:Button runat="server" ID="Button2" CssClass="register-btn" Text="Login" OnClientClick="loginbtn(); return false;" />
+                <br>
+                <label for="registerLink">Register as Student:</label>
+                <a href="Registerpage.aspx">Register</a>
+            </div>
 
 
         </div>
-     
+
       </div>
     </div>
   </div>
 
-<!-- Scripts -->
-<!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/js/isotope.min.js"></script>
-<script src="assets/js/owl-carousel.js"></script>
-<script src="assets/js/counter.js"></script>
-<script src="assets/js/custom.js"></script>
-<script src="assets/js/mapjs.js"></script>
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/counter.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/mapjs.js"></script>
 
-  <script>
-      function showLoginFields(selectedOption) {
-          var adminFields = document.getElementById('adminFields');
-          var landlordFields = document.getElementById('landlordFields');
-          var wardenFields = document.getElementById('wardenFields');
-          var studentFields = document.getElementById('studentFields');
+    <script>
+        function showLoginFields(selectedOption) {
+            var adminFields = document.getElementById('adminFields');
+            var landlordFields = document.getElementById('landlordFields');
+            var wardenFields = document.getElementById('wardenFields');
+            var studentFields = document.getElementById('studentFields');
 
-          // Hide all fields
-          adminFields.style.display = 'none';
-          landlordFields.style.display = 'none';
-          wardenFields.style.display = 'none';
-          studentFields.style.display = 'none';
+            // Hide all fields
+            adminFields.style.display = 'none';
+            landlordFields.style.display = 'none';
+            wardenFields.style.display = 'none';
+            studentFields.style.display = 'none';
 
-          // Show fields based on selected option
-          if (selectedOption === 'admin') {
-              adminFields.style.display = 'block';
-          } else if (selectedOption === 'landlord') {
-              landlordFields.style.display = 'block';
-          } else if (selectedOption === 'warden') {
-              wardenFields.style.display = 'block';
-          } else if (selectedOption === 'student') {
-              studentFields.style.display = 'block';
-          }
-      }
-  </script>
+            // Show fields based on selected option
+            if (selectedOption === 'admin') {
+                adminFields.style.display = 'block';
+            } else if (selectedOption === 'landlord') {
+                landlordFields.style.display = 'block';
+            } else if (selectedOption === 'warden') {
+                wardenFields.style.display = 'block';
+            } else if (selectedOption === 'student') {
+                studentFields.style.display = 'block';
+            }
+        }
+    </script>
 
 
 

@@ -4,20 +4,6 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-     <title></title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-
- <!-- Bootstrap CSS -->
- <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-
- <!-- Additional CSS Files -->
- <link rel="stylesheet" href="assets/css/fontawesome.css">
- <link rel="stylesheet" href="assets/css/svr.css">
- <link rel="stylesheet" href="assets/css/owl.css">
- <link rel="stylesheet" href="assets/css/animate.css">
- <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 
  
      <!-- ***** Preloader Start ***** -->
@@ -38,7 +24,7 @@
     <div class="row">
       <div class="col-lg-8 col-md-8">
         <ul class="info">
-          <li><i class="fa fa-envelope"></i> svr@company.com</li>
+          <li><i class="fa fa-envelope"></i>hsotels@.com</li>
           <li><i class="fa fa-map"></i> Homagama, Sri Lanka</li>
         </ul>
       </div>
@@ -62,7 +48,7 @@
               <nav class="main-nav">
                   <!-- ***** Logo Start ***** -->
                   <a href="#" class="logo">
-                      <h1>SVR</h1>
+                      <h1>HOSTELS</h1>
                   </a>
                   <!-- ***** Logo End ***** -->
                   <!-- ***** Menu Start ***** -->
@@ -89,7 +75,7 @@
                     </li>
 
                     <li>
-                         <asp:LinkButton ID="LinkButton4" runat="server" >
+                         <asp:LinkButton ID="LoginBtn" runat="server" OnClick="LoginBtn_Click" >
                                  <i class="fa fa-user"></i> Login
                          </asp:LinkButton>
                     </li>
