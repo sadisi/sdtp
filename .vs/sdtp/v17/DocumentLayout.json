@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "E:\\NSBM project\\sdtp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|e:\\nsbm project\\sdtp\\sdtp\\homepage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|e:\\nsbm project\\sdtp\\sdtp\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|solutionrelative:sdtp\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|E:\\NSBM project\\sdtp\\sdtp\\homepage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|solutionrelative:sdtp\\homepage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|E:\\NSBM project\\sdtp\\sdtp\\assets\\css\\svr.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|solutionrelative:sdtp\\assets\\css\\svr.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|E:\\NSBM project\\sdtp\\sdtp\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|solutionrelative:sdtp\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|E:\\NSBM project\\sdtp\\sdtp\\webform1.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
@@ -30,23 +30,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "svr.css",
-              "DocumentMoniker": "E:\\NSBM project\\sdtp\\sdtp\\assets\\css\\svr.css",
-              "RelativeDocumentMoniker": "sdtp\\assets\\css\\svr.css",
-              "ToolTip": "E:\\NSBM project\\sdtp\\sdtp\\assets\\css\\svr.css",
-              "RelativeToolTip": "sdtp\\assets\\css\\svr.css",
-              "ViewState": "AQIAAOABAAAAAAAAAAAAAP8BAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-03-05T11:02:48Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Login.aspx",
               "DocumentMoniker": "E:\\NSBM project\\sdtp\\sdtp\\Login.aspx",
               "RelativeDocumentMoniker": "sdtp\\Login.aspx",
@@ -54,11 +42,25 @@
               "RelativeToolTip": "sdtp\\Login.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-03-05T10:19:05.623Z"
+              "WhenOpened": "2024-03-05T10:19:05.623Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "svr.css",
+              "DocumentMoniker": "E:\\NSBM project\\sdtp\\sdtp\\assets\\css\\svr.css",
+              "RelativeDocumentMoniker": "sdtp\\assets\\css\\svr.css",
+              "ToolTip": "E:\\NSBM project\\sdtp\\sdtp\\assets\\css\\svr.css",
+              "RelativeToolTip": "sdtp\\assets\\css\\svr.css",
+              "ViewState": "AQIAACUHAAAAAAAAAAAAADgHAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-03-05T11:02:48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "HomePage.aspx",
               "DocumentMoniker": "E:\\NSBM project\\sdtp\\sdtp\\HomePage.aspx",
               "RelativeDocumentMoniker": "sdtp\\HomePage.aspx",
@@ -89,6 +91,7 @@
               "RelativeDocumentMoniker": "sdtp\\Site1.Master",
               "ToolTip": "E:\\NSBM project\\sdtp\\sdtp\\Site1.Master",
               "RelativeToolTip": "sdtp\\Site1.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2024-03-05T08:21:11.552Z",
               "EditorCaption": ""
