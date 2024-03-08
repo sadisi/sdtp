@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "E:\\NSBM project\\sdtp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|e:\\nsbm project\\sdtp\\sdtp\\landlord.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|solutionrelative:sdtp\\landlord.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|e:\\nsbm project\\sdtp\\sdtp\\homepage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|E:\\NSBM project\\sdtp\\sdtp\\homepage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|solutionrelative:sdtp\\homepage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|E:\\NSBM project\\sdtp\\sdtp\\registerpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|e:\\nsbm project\\sdtp\\sdtp\\registerpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|solutionrelative:sdtp\\registerpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|E:\\NSBM project\\sdtp\\sdtp\\landlord.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|solutionrelative:sdtp\\landlord.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|E:\\NSBM project\\sdtp\\sdtp\\assets\\css\\svr.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -30,24 +30,23 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "landlord.aspx",
               "DocumentMoniker": "E:\\NSBM project\\sdtp\\sdtp\\landlord.aspx",
               "RelativeDocumentMoniker": "sdtp\\landlord.aspx",
-              "ToolTip": "E:\\NSBM project\\sdtp\\sdtp\\landlord.aspx*",
-              "RelativeToolTip": "sdtp\\landlord.aspx*",
+              "ToolTip": "E:\\NSBM project\\sdtp\\sdtp\\landlord.aspx",
+              "RelativeToolTip": "sdtp\\landlord.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-03-08T11:23:25.417Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-08T11:23:25.417Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Registerpage.aspx",
               "DocumentMoniker": "E:\\NSBM project\\sdtp\\sdtp\\Registerpage.aspx",
               "RelativeDocumentMoniker": "sdtp\\Registerpage.aspx",
@@ -68,8 +67,7 @@
               "RelativeToolTip": "sdtp\\Login.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-03-05T10:19:05.623Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-05T10:19:05.623Z"
             },
             {
               "$type": "Document",
@@ -81,12 +79,11 @@
               "RelativeToolTip": "sdtp\\assets\\css\\svr.css",
               "ViewState": "AQIAADcHAAAAAAAAAAAAAEsHAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-03-05T11:02:48Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-05T11:02:48Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "HomePage.aspx",
               "DocumentMoniker": "E:\\NSBM project\\sdtp\\sdtp\\HomePage.aspx",
               "RelativeDocumentMoniker": "sdtp\\HomePage.aspx",

@@ -166,6 +166,9 @@
                         <label for="landlordEmail">Email:</label>
                         <asp:TextBox runat="server" ID="landlordEmail" placeholder="Email"></asp:TextBox>
                         <br>
+                        <label for="landlordUsername">Username:</label>
+                        <asp:TextBox runat="server" ID="landlordUsername" placeholder="Username"></asp:TextBox>
+                        <br>
                         <label for="landlordMobile">Mobile Number:</label>
                         <asp:TextBox runat="server" ID="landlordMobile" placeholder="Mobile Number"></asp:TextBox>
                         <br>
@@ -180,16 +183,19 @@
                         <!-- Have a Account Login Link -->
                         <label for="loginLink">Already Have an Account:</label>
                         <a href="Login.aspx">Login</a>
-
                     </div>
+
 
                     <!-- Warden Registration Fields -->
                     <div id="wardenRegisterFields" style="display: none;">
-                        <label for="hostelId">Hostel ID:</label>
-                        <asp:TextBox runat="server" ID="hostelId" placeholder="Hostel ID"></asp:TextBox>
-                        <br>
                         <label for="wardenEmail">Email:</label>
                         <asp:TextBox runat="server" ID="wardenEmail" placeholder="Email"></asp:TextBox>
+                        <br>
+                        <label for="wardenUsername">Username:</label>
+                        <asp:TextBox runat="server" ID="wardenUsername" placeholder="Username"></asp:TextBox>
+                        <br>
+                        <label for="wardenPhoneNumber">Phone Number:</label>
+                        <asp:TextBox runat="server" ID="wardenPhoneNumber" placeholder="Phone Number"></asp:TextBox>
                         <br>
                         <label for="wardenPassword">Password:</label>
                         <asp:TextBox runat="server" ID="wardenPassword" TextMode="Password" placeholder="Password"></asp:TextBox>
@@ -197,11 +203,7 @@
                         <label for="confirmWardenPassword">Confirm Password:</label>
                         <asp:TextBox runat="server" ID="confirmWardenPassword" TextMode="Password" placeholder="Confirm Password"></asp:TextBox>
                         <br>
-                        <label for="wardenPhoneNumber">Phone Number:</label>
-                        <asp:TextBox runat="server" ID="wardenPhoneNumber" placeholder="Phone Number"></asp:TextBox>
-                        <br>
-                        <label for="wardenAddress">Address:</label>
-                        <asp:TextBox runat="server" ID="wardenAddress" placeholder="Address"></asp:TextBox>
+                        
                         <!-- Registration Button -->
                         <asp:Button runat="server" ID="registrationButton" CssClass="register-btn" Text="Register" OnClientClick="submitRegistration(); return false;" />
 
@@ -214,6 +216,9 @@
                     <div id="studentRegisterFields" style="display: none;">
                         <label for="studentEmail">Email:</label>
                         <asp:TextBox runat="server" ID="studentEmail" placeholder="Email"></asp:TextBox>
+                        <br>
+                        <label for="studentUsername">Username:</label>
+                        <asp:TextBox runat="server" ID="studentUsername" placeholder="Username"></asp:TextBox>
                         <br>
                         <label for="studentPassword">Password:</label>
                         <asp:TextBox runat="server" ID="studentPassword" TextMode="Password" placeholder="Password"></asp:TextBox>
@@ -229,9 +234,8 @@
 
                         <!-- Have an Account Login Link -->
                         <label for="studentLoginLink">Already Have an Account:</label>
-                         <a href="Login.aspx">Login</a>
+                        <a href="Login.aspx">Login</a>
                     </div>
-
 
 
 

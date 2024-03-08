@@ -128,8 +128,8 @@
       <div class="row">
         <div class="col-lg-4">
           <div class="section-heading">
-            <h6>| Best Deal</h6>
-            <h2>Find Your Best Deal Right Now!</h2>
+            <h6>| Landlord</h6>
+            <h2>Add your new Property details </h2>
           </div>
         </div>
         <div class="col-lg-12">

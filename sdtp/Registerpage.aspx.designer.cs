@@ -105,6 +105,15 @@ namespace sdtp
         protected global::System.Web.UI.WebControls.TextBox landlordEmail;
 
         /// <summary>
+        /// landlordUsername control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox landlordUsername;
+
+        /// <summary>
         /// landlordMobile control.
         /// </summary>
         /// <remarks>
@@ -141,15 +150,6 @@ namespace sdtp
         protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
-        /// hostelId control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox hostelId;
-
-        /// <summary>
         /// wardenEmail control.
         /// </summary>
         /// <remarks>
@@ -157,6 +157,24 @@ namespace sdtp
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox wardenEmail;
+
+        /// <summary>
+        /// wardenUsername control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox wardenUsername;
+
+        /// <summary>
+        /// wardenPhoneNumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox wardenPhoneNumber;
 
         /// <summary>
         /// wardenPassword control.
@@ -177,24 +195,6 @@ namespace sdtp
         protected global::System.Web.UI.WebControls.TextBox confirmWardenPassword;
 
         /// <summary>
-        /// wardenPhoneNumber control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox wardenPhoneNumber;
-
-        /// <summary>
-        /// wardenAddress control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox wardenAddress;
-
-        /// <summary>
         /// registrationButton control.
         /// </summary>
         /// <remarks>
@@ -211,6 +211,15 @@ namespace sdtp
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox studentEmail;
+
+        /// <summary>
+        /// studentUsername control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox studentUsername;
 
         /// <summary>
         /// studentPassword control.
