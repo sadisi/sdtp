@@ -103,6 +103,7 @@
     <Content Include="assets\js\mapjs.js" />
     <Content Include="assets\js\owl-carousel.js" />
     <Content Include="HomePage.aspx" />
+    <Content Include="landlord.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Registerpage.aspx" />
     <Content Include="vendor\bootstrap\css\bootstrap.min.css" />
@@ -121,6 +122,13 @@
     </Compile>
     <Compile Include="HomePage.aspx.designer.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="landlord.aspx.cs">
+      <DependentUpon>landlord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="landlord.aspx.designer.cs">
+      <DependentUpon>landlord.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
