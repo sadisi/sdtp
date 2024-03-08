@@ -54,7 +54,7 @@
                   <!-- ***** Menu Start ***** -->
                   <ul class="nav">
                     <li class="active">
-                       <asp:LinkButton ID="HomePageBtn" Text="Home" runat="server"  />  </asp:LinkedButton>
+                       <asp:LinkButton ID="HomePageBtn" Text="Home" runat="server" OnClick="HomePageBtn_Click"  />  </asp:LinkedButton>
                     </li>
 
 
@@ -71,7 +71,7 @@
                     </li>
 
                     <li>
-                          <asp:LinkButton ID="LogOutBtn" Text="LogOut" runat="server"  />  </asp:LinkedButton>
+                          <asp:LinkButton ID="LogOutBtn" Text="LogOut" runat="server" Visible="False"  />  </asp:LinkedButton>
                     </li>
 
                     <li>

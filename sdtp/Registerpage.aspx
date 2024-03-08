@@ -147,13 +147,16 @@
                         <label for="adminEmail">Email:</label>
                         <asp:TextBox runat="server" ID="adminEmail" placeholder="Email"></asp:TextBox>
                         <br>
+                        <label for="adminUsername">Username:</label>
+                        <asp:TextBox runat="server" ID="adminUsername" placeholder="Username"></asp:TextBox>
+                        <br>
                         <label for="adminPassword">Password:</label>
                         <asp:TextBox runat="server" ID="adminPassword" TextMode="Password" placeholder="Password"></asp:TextBox>
                         <br>
                         <label for="confirmAdminPassword">Confirm Password:</label>
                         <asp:TextBox runat="server" ID="confirmAdminPassword" TextMode="Password" placeholder="Confirm Password"></asp:TextBox>
                         <!-- Registration Button -->
-                        <asp:Button runat="server" ID="Button2" CssClass="register-btn" Text="Register" OnClientClick="submitRegistration(); return false;" />
+                        <asp:Button runat="server" ID="Button2" CssClass="register-btn" Text="Register" OnClick="RegisterAdmin_click"/>
 
                         <!-- Have a Account Login Link -->
                         <label for="loginLink">Already Have an Account:</label>
@@ -178,7 +181,7 @@
                         <label for="confirmLandlordPassword">Confirm Password:</label>
                         <asp:TextBox runat="server" ID="confirmLandlordPassword" TextMode="Password" placeholder="Confirm Password"></asp:TextBox>
                         <!-- Registration Button -->
-                        <asp:Button runat="server" ID="Button1" CssClass="register-btn" Text="Register" OnClientClick="submitRegistration(); return false;" />
+                        <asp:Button runat="server" ID="Button1" CssClass="register-btn" Text="Register"  />
 
                         <!-- Have a Account Login Link -->
                         <label for="loginLink">Already Have an Account:</label>
@@ -205,7 +208,7 @@
                         <br>
                         
                         <!-- Registration Button -->
-                        <asp:Button runat="server" ID="registrationButton" CssClass="register-btn" Text="Register" OnClientClick="submitRegistration(); return false;" />
+                        <asp:Button runat="server" ID="registrationButton" CssClass="register-btn" Text="Register" />
 
                         <!-- Have a Account Login Link -->
                         <label for="loginLink">Already Have an Account:</label>
@@ -230,7 +233,7 @@
                         <asp:TextBox runat="server" ID="studentPhoneNumber" placeholder="Phone Number"></asp:TextBox>
                         <br>
                         <!-- Registration Button -->
-                        <asp:Button runat="server" ID="studentRegistrationButton" CssClass="register-btn" Text="Register" OnClientClick="submitStudentRegistration(); return false;" />
+                        <asp:Button runat="server" ID="studentRegistrationButton" CssClass="register-btn" Text="Register" />
 
                         <!-- Have an Account Login Link -->
                         <label for="studentLoginLink">Already Have an Account:</label>
@@ -242,7 +245,7 @@
                 </div>
             </div>
 
-
+           
         </div>
     </div>
   

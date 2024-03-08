@@ -148,7 +148,7 @@
                 <br>
                 <label for="adminPassword">Password:</label>
                 <asp:TextBox runat="server" ID="adminPassword" TextMode="Password" placeholder="Password"></asp:TextBox>
-                <asp:Button runat="server" ID="adminLoginButton" CssClass="register-btn" Text="Login" OnClientClick="loginbtn(); return false;" />
+                <asp:Button runat="server" ID="adminLoginButton" CssClass="register-btn" Text="Login" OnClick="AdminLogin_click" />
                 <label for="registerLink">Register as Admin:</label>
                 <a href="Registerpage.aspx">Register</a>
             </div>
@@ -160,7 +160,7 @@
                 <br>
                 <label for="landlordPassword">Password:</label>
                 <asp:TextBox runat="server" ID="landlordPassword" TextMode="Password" placeholder="Password"></asp:TextBox>
-                <asp:Button runat="server" ID="landlordLoginButton" CssClass="register-btn" Text="Login" OnClientClick="loginbtn(); return false;" />
+                <asp:Button runat="server" ID="landlordLoginButton" CssClass="register-btn" Text="Login"  />
                 <label for="registerLink">Register as Landlord:</label>
                 <a href="Registerpage.aspx">Register</a>
             </div>
@@ -172,7 +172,7 @@
                 <br>
                 <label for="wardenPassword">Password:</label>
                 <asp:TextBox runat="server" ID="wardenPassword" TextMode="Password" placeholder="Password"></asp:TextBox>
-                <asp:Button runat="server" ID="wardenLoginButton" CssClass="register-btn" Text="Login" OnClientClick="loginbtn(); return false;" />
+                <asp:Button runat="server" ID="wardenLoginButton" CssClass="register-btn" Text="Login"  />
                 <br>
                 <label for="registerLink">Register as Warden:</label>
                <a href="Registerpage.aspx">Register</a>
@@ -185,7 +185,7 @@
                 <br>
                 <label for="studentPassword">Password:</label>
                 <asp:TextBox runat="server" ID="TextBox4" TextMode="Password" placeholder="Password"></asp:TextBox>
-                <asp:Button runat="server" ID="Button2" CssClass="register-btn" Text="Login" OnClientClick="loginbtn(); return false;" />
+                <asp:Button runat="server" ID="Button2" CssClass="register-btn" Text="Login"  />
                 <br>
                 <label for="registerLink">Register as Student:</label>
                 <a href="Registerpage.aspx">Register</a>

@@ -23,5 +23,10 @@ namespace sdtp
         {
             Response.Redirect("Registerpage.aspx");
         }
+
+        protected void AdminLogin_click(object sender, EventArgs e)
+        {
+           Response.Write("<script>alert('Login .')</script>");
+        }
     }
 }

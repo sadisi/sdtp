@@ -18,5 +18,10 @@ namespace sdtp
         {
             Response.Redirect("Login.aspx");
         }
+
+        protected void HomePageBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("HomePage.aspx");
+        }
     }
 }
