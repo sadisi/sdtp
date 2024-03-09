@@ -1,123 +1,17 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="landlord.aspx.cs" Inherits="sdtp.landlord" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="WardenPage.aspx.cs" Inherits="sdtp.WardenPage" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-
-
-
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-
-
-    <!--add property-->
-    <div class="section best-deal">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="section-heading">
-                        <h6>| Landlord</h6>
-                        <h2>Add your new Property details </h2>
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="tabs-content">
-                        <div class="row">
-
-                            <div class="tab-content" id="myTabContent">
-                                <div class="tab-pane fade show active" id="appartment" role="tabpanel" aria-labelledby="appartment-tab">
-                                    <div class="row">
-                                        <div class="col-lg-3">
-                                            <div class="info-table">
-                                                <ul>
-                                                    <li>Bedrooms: <span>
-                                                        <asp:TextBox runat="server" ID="BedroomsTextBox" Placeholder="bedrooms count" /></span></li>
-                                                    <li>Bathrooms: <span>
-                                                        <asp:TextBox runat="server" ID="BathroomsTextBox" Placeholder="bathrooms count" /></span></li>
-                                                    <li>Area: <span>
-                                                        <asp:TextBox runat="server" ID="AreaTextBox" Placeholder="area " /></span></li>
-                                                    <li>AC: <span>
-                                                        <asp:TextBox runat="server" ID="ACTextBox" Placeholder="available or not" /></span></li>
-                                                    <li>Your Location latitude : <span>
-                                                        <asp:TextBox runat="server" ID="latitudeTextBox" Placeholder="latitude" /></span></li>
-                                                    <li>Your Location longitude: <span>
-                                                        <asp:TextBox runat="server" ID="longitudetextBox" Placeholder="longitude" /></span></li>
-
-                                                </ul>
-
-                                            
-                                            </div>
-                                        </div>
-
-                                        <!--img-->
-                                        <div class="col-lg-6">
-                                            <label for="imageUpload">Select up to 5 images:</label>
-                                            <asp:FileUpload runat="server" ID="imageUpload" Accept="image/*" Multiple="multiple" />
-                                            <asp:Button runat="server" ID="btnUploadImages" Text="Upload Images" OnClientClick="return showSelectedImages();" />
-
-                                            <div id="selectedImagesContainer">
-                                                <img src="#" alt="" id="selectedImage" style="max-width: 10px; display: none;" />
-                                            </div>
-
-                                            <script type="text/javascript">
-                                                function showSelectedImages() {
-                                                    var fileUpload = document.getElementById('<%= imageUpload.ClientID %>');
-                                                    var selectedImage = document.getElementById('selectedImage');
-
-                                                    if (fileUpload.files.length > 0) {
-                                                        // Assuming you want to display the first selected image
-                                                        selectedImage.src = URL.createObjectURL(fileUpload.files[0]);
-                                                        selectedImage.style.display = 'block';
-                                                    } else {
-                                                        alert('Please select at least one image.');
-                                                        return false; // Prevent form submission
-                                                    }
-
-                                                    return true; // Allow form submission
-                                                }
-                                            </script>
-                                        </div>
-
-
-
-
-
-                                        <!--img end-->
-
-
-
-
-                    
-                                        <div class="col-lg-3">
-                                            <h4>Add Information About Property</h4>
-
-                                            <div class="icon-button">
-                                                <asp:TextBox runat="server" ID="PropertyDescriptionTextBox" TextMode="MultiLine" placeholder="Add property description" Rows="22" Columns="50"></asp:TextBox>
-                                                <asp:LinkButton runat="server" ID="btnSubmitDescription" CssClass="btn-with-icon">
-                                              <i class="fa fa-save"></i> Post
-                                                </asp:LinkButton>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--add property end -->
-
-    <!--previous property -->
+    <
+    <!--hostel Grid-->
     <div class="properties section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 offset-lg-4">
                     <div class="section-heading text-center">
-                        <h6>| Your previously add Properties</h6>
-
+                        <h6>| Properties</h6>
+                        <h2>We Provide The Best Property You Like</h2>
                     </div>
                 </div>
             </div>
@@ -130,56 +24,69 @@
                         <h6>Rs.65000/=</h6>
                         <h4><a href="hostel-details.aspx">Makubura,Homagama</a></h4>
                         <ul>
-                            <li>Bedrooms: <span>6</span></li>
-                            <li>Bathrooms: <span>5</span></li>
-                            <li>Area: <span>450m2</span></li>
-                            <li>AC: <span>No</span></li>
+                            <li>Bedrooms: <span>8</span></li>
+                            <li>Bathrooms: <span>8</span></li>
+                            <li>Area: <span>545m2</span></li>
+                            <li>Floor: <span>1</span></li>
+                            <li>Parking: <span>6 spots</span></li>
+                            <li>AC: <span>Yes</span></li>
+                            <li>
+                                <label for="description">Description:</label>
+                                <textarea id="DescriptionArea" rows="10" cols="50" placeholder="Description"></textarea>
+                            </li>
+
                         </ul>
-                        <div class="main-button">
-                            <a href="property-details.html"><i class="fa-solid fa-pen-to-square"></i>&nbsp Update</a>
-                            <a href="property-details.html"><i class="fa-solid fa-trash"></i>&nbsp Delete</a>
-                            <a href="property-details.html"><i class="fa-solid fa-circle-check"></i>&nbsp Save</a>
+                        <div class="main-button ">
+                            <asp:LinkButton runat="server" ID="btnApprove" Text="Approve" OnClientClick="approveProperty()">
+                         <span class="fa fa-check"></span> Approve 
+                            </asp:LinkButton>
+
+                            <asp:LinkButton runat="server" ID="btnRemove" Text="Remove" OnClientClick="removeProperty()">
+                         <span class="fa fa-trash"></span> Remove
+                            </asp:LinkButton>
                         </div>
 
 
 
                     </div>
                 </div>
+
+
+
                 <div class="col-lg-4 col-md-6">
                     <div class="item">
-                        <a href="hostel-details.aspx">
+                        <a href="property-details.html">
                             <img src="assets/images/vilo.png" alt=""></a>
-                        <span class="category">Hostel</span>
-                        <h6>Rs.55000/=</h6>
-                        <h4><a href="hostel-details.aspx">Pitipana, Homagama</a></h4>
+                        <span class="category">Apartment</span>
+                        <h6>Rs.35000/=</h6>
+                        <h4><a href="property-details.html">School Junction,Homagama</a></h4>
                         <ul>
-                            <li>Bedrooms: <span>6</span></li>
-                            <li>Bathrooms: <span>5</span></li>
-                            <li>Area: <span>450m2</span></li>
-                            <li>AC: <span>No</span></li>
+                            <li>Bedrooms: <span>3</span></li>
+                            <li>Bathrooms: <span>2</span></li>
+                            <li>Area: <span>165m2</span></li>
+                            <li>Floor: <span>1</span></li>
+                            <li>Parking: <span>6 spots</span></li>
+                            <li>AC: <span>Yes</span></li>
+                            <li>
+                                <label for="description">Description:</label>
+                                <textarea id="DescriptionArea" rows="10" cols="50" placeholder="Description"></textarea>
+                            </li>
                         </ul>
-                        <div class="main-button">
-                            <a href="property-details.html"><i class="fa-solid fa-pen-to-square"></i>&nbsp Update</a>
-                            <a href="property-details.html"><i class="fa-solid fa-trash"></i>&nbsp  Delete</a>
-                            <a href="property-details.html"><i class="fa-solid fa-circle-check"></i>&nbsp Save</a>
+                        <div class="main-button ">
+                            <asp:LinkButton runat="server" ID="LinkButton1" Text="Approve" OnClientClick="approveProperty()">
+                               <span class="fa fa-check"></span> Approve 
+                            </asp:LinkButton>
+
+                            <asp:LinkButton runat="server" ID="LinkButton2" Text="Remove" OnClientClick="removeProperty()">
+                               <span class="fa fa-trash"></span> Remove
+                            </asp:LinkButton>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <!--lanlord pp show 1-->
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <!--lanlord pp show 2-->
-                </div>
-
-
             </div>
         </div>
     </div>
-
-
-
-    <!--previous add property end-->
+    <!--hostel Grid end-->
 
     <div class="contact section">
         <div class="container">
@@ -309,7 +216,6 @@
             </div>
         </div>
     </div>
-
 
 
 </asp:Content>

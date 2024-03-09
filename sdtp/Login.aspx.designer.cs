@@ -15,60 +15,6 @@ namespace sdtp
     {
 
         /// <summary>
-        /// HomePageBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton HomePageBtn;
-
-        /// <summary>
-        /// Hostelsbtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton Hostelsbtn;
-
-        /// <summary>
-        /// LinkButton2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton2;
-
-        /// <summary>
-        /// ContactBtnUs control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton ContactBtnUs;
-
-        /// <summary>
-        /// LogOutBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LogOutBtn;
-
-        /// <summary>
-        /// LinkButton4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton4;
-
-        /// <summary>
         /// adminUsername control.
         /// </summary>
         /// <remarks>
@@ -96,13 +42,13 @@ namespace sdtp
         protected global::System.Web.UI.WebControls.Button adminLoginButton;
 
         /// <summary>
-        /// landlordEmail control.
+        /// landlordUsername control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox landlordEmail;
+        protected global::System.Web.UI.WebControls.TextBox landlordUsername;
 
         /// <summary>
         /// landlordPassword control.
@@ -123,13 +69,13 @@ namespace sdtp
         protected global::System.Web.UI.WebControls.Button landlordLoginButton;
 
         /// <summary>
-        /// wardenEmail control.
+        /// wardenUsername control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox wardenEmail;
+        protected global::System.Web.UI.WebControls.TextBox wardenUsername;
 
         /// <summary>
         /// wardenPassword control.
@@ -150,30 +96,30 @@ namespace sdtp
         protected global::System.Web.UI.WebControls.Button wardenLoginButton;
 
         /// <summary>
-        /// TextBox3 control.
+        /// studentUsername control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox studentUsername;
 
         /// <summary>
-        /// TextBox4 control.
+        /// studentPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox studentPassword;
 
         /// <summary>
-        /// Button2 control.
+        /// studentLoginButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Button studentLoginButton;
     }
 }

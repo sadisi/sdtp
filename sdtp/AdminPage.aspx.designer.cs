@@ -11,214 +11,187 @@ namespace sdtp
 {
 
 
-    public partial class Registerpage
+    public partial class AdminPage
     {
 
         /// <summary>
-        /// adminEmail control.
+        /// EmailTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox adminEmail;
+        protected global::System.Web.UI.WebControls.TextBox EmailTextBox;
 
         /// <summary>
-        /// adminUsername control.
+        /// UsernameTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox adminUsername;
+        protected global::System.Web.UI.WebControls.TextBox UsernameTextBox;
 
         /// <summary>
-        /// adminPassword control.
+        /// MobileNumberTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox adminPassword;
+        protected global::System.Web.UI.WebControls.TextBox MobileNumberTextBox;
 
         /// <summary>
-        /// confirmAdminPassword control.
+        /// PasswordTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox confirmAdminPassword;
+        protected global::System.Web.UI.WebControls.TextBox PasswordTextBox;
 
         /// <summary>
-        /// Button2 control.
+        /// ConfirmPasswordTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.TextBox ConfirmPasswordTextBox;
 
         /// <summary>
-        /// landlordEmail control.
+        /// LandlordButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox landlordEmail;
+        protected global::System.Web.UI.WebControls.Button LandlordButton;
 
         /// <summary>
-        /// landlordUsername control.
+        /// StudentEmailTxtbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox landlordUsername;
+        protected global::System.Web.UI.WebControls.TextBox StudentEmailTxtbox;
 
         /// <summary>
-        /// landlordMobile control.
+        /// StudentUNTxtbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox landlordMobile;
+        protected global::System.Web.UI.WebControls.TextBox StudentUNTxtbox;
 
         /// <summary>
-        /// landlordPassword control.
+        /// StudentMNTxtbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox landlordPassword;
+        protected global::System.Web.UI.WebControls.TextBox StudentMNTxtbox;
 
         /// <summary>
-        /// confirmLandlordPassword control.
+        /// StudentPSTxtbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox confirmLandlordPassword;
+        protected global::System.Web.UI.WebControls.TextBox StudentPSTxtbox;
 
         /// <summary>
-        /// Button1 control.
+        /// StudentConfirmPSTxtbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.TextBox StudentConfirmPSTxtbox;
 
         /// <summary>
-        /// wardenEmail control.
+        /// StudentButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox wardenEmail;
+        protected global::System.Web.UI.WebControls.Button StudentButton;
 
         /// <summary>
-        /// wardenUsername control.
+        /// WardenEmailTxtbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox wardenUsername;
+        protected global::System.Web.UI.WebControls.TextBox WardenEmailTxtbox;
 
         /// <summary>
-        /// wardenPhoneNumber control.
+        /// WardenUNTxtbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox wardenPhoneNumber;
+        protected global::System.Web.UI.WebControls.TextBox WardenUNTxtbox;
 
         /// <summary>
-        /// wardenPassword control.
+        /// WardenMNTxtbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox wardenPassword;
+        protected global::System.Web.UI.WebControls.TextBox WardenMNTxtbox;
 
         /// <summary>
-        /// confirmWardenPassword control.
+        /// WardenPSTxtbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox confirmWardenPassword;
+        protected global::System.Web.UI.WebControls.TextBox WardenPSTxtbox;
 
         /// <summary>
-        /// registrationButton control.
+        /// WardenPSConfirmTxtbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button registrationButton;
+        protected global::System.Web.UI.WebControls.TextBox WardenPSConfirmTxtbox;
 
         /// <summary>
-        /// studentEmail control.
+        /// WardenButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox studentEmail;
+        protected global::System.Web.UI.WebControls.Button WardenButton;
 
         /// <summary>
-        /// studentUsername control.
+        /// PropertyDescriptionTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox studentUsername;
+        protected global::System.Web.UI.WebControls.TextBox PropertyDescriptionTextBox;
 
         /// <summary>
-        /// studentPassword control.
+        /// btnSubmitDescription control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox studentPassword;
-
-        /// <summary>
-        /// confirmStudentPassword control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox confirmStudentPassword;
-
-        /// <summary>
-        /// studentPhoneNumber control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox studentPhoneNumber;
-
-        /// <summary>
-        /// studentRegistrationButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button studentRegistrationButton;
+        protected global::System.Web.UI.WebControls.LinkButton btnSubmitDescription;
     }
 }

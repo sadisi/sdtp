@@ -5,121 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
- 
-     <!-- ***** Preloader Start ***** -->
-     <div id="js-preloader" class="js-preloader">
-  <div class="preloader-inner">
-    <span class="dot"></span>
-    <div class="dots">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
-</div>
-<!-- ***** Preloader End ***** -->
 
-<div class="sub-header">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-8">
-        <ul class="info">
-          <li><i class="fa fa-envelope"></i>hsotels@.com</li>
-          <li><i class="fa fa-map"></i> Homagama, Sri Lanka</li>
-        </ul>
-      </div>
-      <div class="col-lg-4 col-md-4">
-        <ul class="social-links">
-          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-          <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ***** Header Area Start ***** -->
-<header class="header-area header-sticky">
-  <div class="container">
-      <div class="row">
-          <div class="col-12">
-              <nav class="main-nav">
-                  <!-- ***** Logo Start ***** -->
-                  <a href="#" class="logo">
-                      <h1>HOSTELS</h1>
-                  </a>
-                  <!-- ***** Logo End ***** -->
-                  <!-- ***** Menu Start ***** -->
-                  <ul class="nav">
-                    <li class="active">
-                       <asp:LinkButton ID="HomePageBtn" Text="Home" runat="server" OnClick="HomePageBtn_Click"  />  </asp:LinkedButton>
-                    </li>
-
-
-                    <li>
-                         <asp:LinkButton ID="Hostelsbtn" Text="Hostels" runat="server"  />  </asp:LinkedButton>
-                    </li>
-
-                    <li>
-                         <asp:LinkButton ID="LinkButton2" Text="Property Details" runat="server"  />  </asp:LinkedButton>
-                    </li>
-
-                    <li>
-                         <asp:LinkButton ID="ContactBtnUs" Text="Contact Us" runat="server"  />  </asp:LinkedButton>
-                    </li>
-
-                    <li>
-                          <asp:LinkButton ID="LogOutBtn" Text="LogOut" runat="server" Visible="False"  />  </asp:LinkedButton>
-                    </li>
-
-                    <li>
-                         <asp:LinkButton ID="LoginBtn" runat="server" OnClick="LoginBtn_Click" >
-                                 <i class="fa fa-user"></i> Login
-                         </asp:LinkButton>
-                    </li>
-
-
-                    
-                </ul>   
-                  <a class='menu-trigger'>
-                      <span>Menu</span>
-                  </a>
-                  <!-- ***** Menu End ***** -->
-              </nav>
-          </div>
-      </div>
-  </div>
-</header>
-<!-- ***** Header Area End ***** -->
-
-    <!--banner-->
-    
-  <div class="main-banner">
-    <div class="owl-carousel owl-banner">
-      <div class="item item-1">
-        <div class="header-text">
-          <span class="category">Homagama, <em>Sri Lanka</em></span>
-          <h2>Hurry!<br> Get the best accomodaytions in town</h2>
-        </div>
-      </div>
-      <div class="item item-2">
-        <div class="header-text">
-          <span class="category">Pitipana, <em>Sri Lanka</em></span>
-          <h2>Be Quick!<br>Get the Best Hostel for you</h2>
-        </div>
-      </div>
-      <div class="item item-3">
-        <div class="header-text">
-          <span class="category">School-Junction, <em>Sri Lanka</em></span>
-          <h2>Get the highest level hostels near to the NSBM</h2>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  
  <!--best Deal start-->
   <div class="section best-deal">
     <div class="container">
@@ -450,7 +336,7 @@
                   });
               });
 
-           
+
           }
 
           // Call initMap when the page has loaded

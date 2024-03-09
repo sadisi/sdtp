@@ -1846,7 +1846,7 @@ a {
 
 /* Style for the submit button in sign up page */
 .register-btn {
-    background-color: #4CAF50;
+    background-color: #f35525;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -1856,12 +1856,11 @@ a {
     width: 100%;
 }
 
- .register-btn:hover {
-        background-color: #45a049;
+    .register-btn:hover {
+        background-color: #010101;
+        transition: all 0.8s ease;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
-
-
-
 
 
 

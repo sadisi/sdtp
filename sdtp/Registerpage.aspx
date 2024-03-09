@@ -4,122 +4,6 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
   
-   
-    <!-- ***** Preloader Start ***** -->
-    <div id="js-preloader" class="js-preloader">
-        <div class="preloader-inner">
-            <span class="dot"></span>
-            <div class="dots">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </div>
-    <!-- ***** Preloader End ***** -->
-
-    <div class="sub-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-8">
-                    <ul class="info">
-                        <li><i class="fa fa-envelope"></i>info@company.com</li>
-                        <li><i class="fa fa-map"></i>Homagama, LK 33160</li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 col-md-4">
-                    <ul class="social-links">
-                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                        <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-<!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky">
-      <div class="container">
-          <div class="row">
-              <div class="col-12">
-                  <nav class="main-nav">
-                      <!-- ***** Logo Start ***** -->
-                      <a href="index.aspx" class="logo">
-                          <h1>HOSTELS</h1>
-                      </a>
-                      <!-- ***** Logo End ***** -->
-                      <!-- ***** Menu Start ***** -->
-                      <ul class="nav">
-                          <li class="active">
-                              <asp:LinkButton ID="HomePageBtn" Text="Home" runat="server" OnClick="HomePageBtn_Click" />
-                              </asp:LinkedButton>
-                          </li>
-
-
-                          <li>
-                              <asp:LinkButton ID="Hostelsbtn" Text="Hostels" runat="server" />
-                              </asp:LinkedButton>
-                          </li>
-
-                          <li>
-                              <asp:LinkButton ID="LinkButton2" Text="Hostel Details" runat="server" />
-                              </asp:LinkedButton>
-                          </li>
-
-                          <li>
-                              <asp:LinkButton ID="ContactBtnUs" Text="Contact Us" runat="server" />
-                              </asp:LinkedButton>
-                          </li>
-
-
-                          <li>
-                              <asp:LinkButton ID="LinkButton4" runat="server" OnClick="LinkButton4_Click">
-                                 <i class="fa fa-user"></i> Login
-                              </asp:LinkButton>
-                          </li>
-
-
-
-                      </ul>
-                      <a class='menu-trigger'>
-                          <span>Menu</span>
-                      </a>
-                      <!-- ***** Menu End ***** -->
-                  </nav>
-              </div>
-          </div>
-      </div>
-  </header>
-<!-- ***** Header Area End ***** -->
-
-    <!-- ***** Header Area End ***** -->
-
-    <div class="main-banner">
-        <div class="owl-carousel owl-banner">
-            <div class="item item-1">
-                <div class="header-text">
-                    <span class="category">Homagama, <em>Sri Lanka</em></span>
-                    <h2>Hurry!<br>
-                        Register as landlord</h2>
-                </div>
-            </div>
-            <div class="item item-2">
-                <div class="header-text">
-                    <span class="category">Pitipana, <em>Sri Lanka</em></span>
-                    <h2>Be Quick!<br>
-                        Register as Warden</h2>
-                </div>
-            </div>
-            <div class="item item-3">
-                <div class="header-text">
-                    <span class="category">School-Junction, <em>Sri Lanka</em></span>
-                    <h2>Welcome !</h2>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div class="featured section">
         <div class="container">
@@ -135,6 +19,7 @@
                     <div>
                         <label for="userType">Select User Type:</label>
                         <select id="userType" onchange="showRegisterFields(this.value)">
+                             <option value="user">Select your Type</option>
                             <option value="admin">Admin</option>
                             <option value="landlord">Landlord</option>
                             <option value="warden">Warden</option>
@@ -181,7 +66,7 @@
                         <label for="confirmLandlordPassword">Confirm Password:</label>
                         <asp:TextBox runat="server" ID="confirmLandlordPassword" TextMode="Password" placeholder="Confirm Password"></asp:TextBox>
                         <!-- Registration Button -->
-                        <asp:Button runat="server" ID="Button1" CssClass="register-btn" Text="Register"  />
+                        <asp:Button runat="server" ID="Button1" CssClass="register-btn" Text="Register" OnClick="RegisterLandord_click" />
 
                         <!-- Have a Account Login Link -->
                         <label for="loginLink">Already Have an Account:</label>
@@ -208,7 +93,7 @@
                         <br>
                         
                         <!-- Registration Button -->
-                        <asp:Button runat="server" ID="registrationButton" CssClass="register-btn" Text="Register" />
+                        <asp:Button runat="server" ID="registrationButton" CssClass="register-btn" Text="Register" OnClick="RegisterWarden_click" />
 
                         <!-- Have a Account Login Link -->
                         <label for="loginLink">Already Have an Account:</label>
@@ -233,7 +118,7 @@
                         <asp:TextBox runat="server" ID="studentPhoneNumber" placeholder="Phone Number"></asp:TextBox>
                         <br>
                         <!-- Registration Button -->
-                        <asp:Button runat="server" ID="studentRegistrationButton" CssClass="register-btn" Text="Register" />
+                        <asp:Button runat="server" ID="studentRegistrationButton" CssClass="register-btn" Text="Register" OnClick="RegisterStudent_click" />
 
                         <!-- Have an Account Login Link -->
                         <label for="studentLoginLink">Already Have an Account:</label>
