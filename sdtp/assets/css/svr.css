@@ -1864,3 +1864,17 @@ a {
 
 
 
+/* home page map location see more button */
+.map-button {
+    background-color: #f35525; 
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .map-button:hover {
+        transition: all 0.8s ease;
+        background-color: #2e0303;
+    }

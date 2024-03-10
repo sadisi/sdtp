@@ -87,6 +87,15 @@ namespace sdtp
         protected global::System.Web.UI.WebControls.Button btnUploadImages;
 
         /// <summary>
+        /// hiddenImagePath control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputHidden hiddenImagePath;
+
+        /// <summary>
         /// PropertyDescriptionTextBox control.
         /// </summary>
         /// <remarks>

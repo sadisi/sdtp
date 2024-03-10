@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -11,7 +12,11 @@ namespace sdtp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Retrieve the Google Maps API key from the appSettings section in web.config
+            string googleMapsApiKey = WebConfigurationManager.AppSettings["GoogleMapsApiKey"];
 
+            // Register the API key as a startup script variable
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "GoogleMapsApiKey", $"var googleMapsApiKey = '{googleMapsApiKey}';", true);
         }
        
     }

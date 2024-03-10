@@ -1,4 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="HomePage.aspx.cs" Inherits="sdtp.HomePage" %>
+﻿
+
+<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="HomePage.aspx.cs" Inherits="sdtp.HomePage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 
@@ -281,7 +283,7 @@
 
               // The map, centered at a default location
               map = new Map(document.getElementById("map"), {
-                  zoom: 14,
+                  zoom: 15,
                   center: { lat: 6.820954288978381, lng: 80.04024112766886 },
                   mapId: "DEMO_MAP_ID",
                   mapTypeId: 'satellite',
@@ -293,19 +295,19 @@
                       lat: 6.8227638483330315,
                       lng: 80.03801351732815,
                       title: 'Location 1',
-                      content: '<div id="info-window-content"><img src="assets/images/vilo.png" alt="Image 1"><p>Additional information about Location 1.</p><input type="text" id="input1" placeholder="Enter text"><button onclick="submitFunction(\'input1\')" style="margin-top: 5px; padding: 5px 10px; background-color: #f35525; color: white; border: none; border-radius: 3px; cursor: pointer;">Submit</button></div>'
+                      content: '<div id="info-window-content"><img src="assets/images/vilo.png" alt="Image 1"><p>Additional information about Location 1.</p><input type="text" id="input1" placeholder="Enter text"><button  Class="map-button"">Submit</button></div>'
                   },
                   {
                       lat: 6.825874839137297,
                       lng: 80.04293712283503,
                       title: 'Location 2',
-                      content: '<div id="info-window-content"><img src="assets/images/property-05.jpg" alt="Image 2"><p>Additional information about Location 2.</p><input type="text" id="input2" placeholder="Enter text"><button onclick="submitFunction(\'input2\')" style="margin-top: 5px; padding: 5px 10px; background-color: #f35525; color: white; border: none; border-radius: 3px; cursor: pointer;">Submit</button></div>'
+                      content: '<div id="info-window-content"><img src="assets/images/property-05.jpg" alt="Image 2"><p>Additional information about Location 2.</p><input type="text" id="input2" placeholder="Enter text"><button Class="map-button">Submit</button></div>'
                   },
                   {
                       lat: 6.824981287537003,
                       lng: 80.0417274849921,
                       title: 'Location 3',
-                      content: '<div id="info-window-content"><img src="assets/images/property-06.jpg" alt="Image 3"><p>Additional information about Location 3.</p><input type="text" id="input3" placeholder="Enter text"><button onclick="submitFunction(\'input3\')" style="margin-top: 5px; padding: 5px 10px; background-color: #f35525; color: white; border: none; border-radius: 3px; cursor: pointer;">Submit</button></div>'
+                      content: '<div id="info-window-content"><img src="assets/images/property-06.jpg" alt="Image 3"><p>Additional information about Location 3.</p><input type="text" id="input3" placeholder="Enter text"><button  Class="map-button"">Submit</button></div>'
                   },
                   // Add contentString for other locations
               ];
@@ -346,7 +348,7 @@
           function submitFunction(inputId) {
               const inputValue = document.getElementById(inputId).value;
               alert('Submitted value: ' + inputValue);
-              // You can perform further actions with the submitted value
+            
           }
       </script>
 

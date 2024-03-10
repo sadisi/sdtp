@@ -57,3 +57,5 @@ E:\NSBM project\sdtp\sdtp\obj\Debug\sdtp.csproj.CoreCompileInputs.cache
 E:\NSBM project\sdtp\sdtp\obj\Debug\sdtp.csproj.Up2Date
 E:\NSBM project\sdtp\sdtp\obj\Debug\sdtp.dll
 E:\NSBM project\sdtp\sdtp\obj\Debug\sdtp.pdb
+E:\NSBM project\sdtp\sdtp\bin\Newtonsoft.Json.dll
+E:\NSBM project\sdtp\sdtp\bin\Newtonsoft.Json.xml

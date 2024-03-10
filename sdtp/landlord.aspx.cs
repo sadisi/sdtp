@@ -9,10 +9,18 @@ namespace sdtp
 {
     public partial class landlord : System.Web.UI.Page
     {
-       
+
         protected void HomePageBtn_Click(object sender, EventArgs e)
         {
             this.Response.Redirect("homepage.aspx");
         }
-    }
+
+
+
+        protected void landlordhstAdd_click(object sender, EventArgs e)
+        {
+           Response.Write("<script>alert('Activated.')</script>");
+
+        }
+    } 
 }

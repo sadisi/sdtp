@@ -58,15 +58,22 @@
                                                 <img src="#" alt="" id="selectedImage" style="max-width: 10px; display: none;" />
                                             </div>
 
+                                            <!-- Add hidden input field to store the image path -->
+                                            <input type="hidden" runat="server" id="hiddenImagePath" />
+
                                             <script type="text/javascript">
                                                 function showSelectedImages() {
                                                     var fileUpload = document.getElementById('<%= imageUpload.ClientID %>');
                                                     var selectedImage = document.getElementById('selectedImage');
+                                                    var hiddenImagePath = document.getElementById('<%= hiddenImagePath.ClientID %>');
 
                                                     if (fileUpload.files.length > 0) {
                                                         // Assuming you want to display the first selected image
                                                         selectedImage.src = URL.createObjectURL(fileUpload.files[0]);
                                                         selectedImage.style.display = 'block';
+
+                                                        // Update the hidden input field with the image path
+                                                        hiddenImagePath.value = "path_to_uploaded_image_1"; // Update this with the actual image path
                                                     } else {
                                                         alert('Please select at least one image.');
                                                         return false; // Prevent form submission
@@ -92,7 +99,7 @@
 
                                             <div class="icon-button">
                                                 <asp:TextBox runat="server" ID="PropertyDescriptionTextBox" TextMode="MultiLine" placeholder="Add property description" Rows="22" Columns="50"></asp:TextBox>
-                                                <asp:LinkButton runat="server" ID="btnSubmitDescription" CssClass="btn-with-icon">
+                                                <asp:LinkButton runat="server" ID="btnSubmitDescription" CssClass="btn-with-icon" OnClick ="landlordhstAdd_click">
                                               <i class="fa fa-save"></i> Post
                                                 </asp:LinkButton>
 
