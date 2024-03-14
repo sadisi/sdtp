@@ -1878,3 +1878,128 @@ a {
         transition: all 0.8s ease;
         background-color: #2e0303;
     }
+
+
+
+
+
+.item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+    .item img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+.category {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.main-button a {
+    margin-right: 10px;
+}
+
+.section-heading h6 {
+    margin-bottom: 20px;
+}
+
+
+
+/*selected images*/
+
+.col-lg-6 {
+    margin-top: 20px; 
+}
+
+label[for="imageUpload"] {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#imageUpload {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.selected-images-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+    .selected-images-container img {
+        max-width: 150px; 
+        max-height: 150px; 
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+
+
+
+.icon-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+    .icon-button .btn-with-icon {
+        margin: 0 10px; /* Adjust the margin between buttons as needed */
+    }
+
+
+item-color {
+    background-color: f0f0f0;
+}
+
+
+
+/*landlord page gridview */
+
+/* Style for the parent container */
+.grid-container {
+    margin-top: 20px; /* Adjust the top margin as needed */
+}
+
+/* Style for the GridView */
+#GridView1 {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px; /* Adjust the bottom margin as needed */
+}
+
+    #GridView1 th, #GridView1 td {
+        border: 1px solid #ddd; /* Border color for header and cells */
+        padding: 8px;
+        text-align: left;
+    }
+
+    #GridView1 th {
+        background-color: #f2f2f2; /* Header background color */
+    }
+
+/* Style for the GridView item */
+.item {
+    border: 1px solid #ddd; /* Border color for the item */
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners for the item */
+}
+
+
+
+.scrollbar {
+    height: 600px;
+    overflow-y: scroll;
+}

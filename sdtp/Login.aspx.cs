@@ -136,7 +136,7 @@ namespace sdtp
                         Session["username"] = dr.GetValue(2).ToString();
                         Session["role"] = "warden";
                     }
-                    Response.Redirect("homepage.aspx");
+                    Response.Redirect("WardenPage.aspx");
                 }
                 else
                 {

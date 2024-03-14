@@ -177,21 +177,21 @@ namespace sdtp
         protected global::System.Web.UI.WebControls.Button WardenButton;
 
         /// <summary>
-        /// PropertyDescriptionTextBox control.
+        /// ArticleTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PropertyDescriptionTextBox;
+        protected global::System.Web.UI.WebControls.TextBox ArticleTextBox;
 
         /// <summary>
-        /// btnSubmitDescription control.
+        /// ArticleUploadBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnSubmitDescription;
+        protected global::System.Web.UI.WebControls.LinkButton ArticleUploadBtn;
     }
 }

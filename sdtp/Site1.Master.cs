@@ -20,6 +20,7 @@ namespace sdtp
                     HomePageBtn.Visible = true;
                     ContactBtnUs.Visible = true;
                     landlordPageBtn.Visible = false;
+                    WardenPageBtn.Visible = false;
                     LogOutBtn.Visible = false; //lg out btn
                     HelloUser.Visible = false; //usnm display button
                     
@@ -34,6 +35,7 @@ namespace sdtp
                     LogOutBtn.Visible = true; //lg out btn
                     landlordPageBtn.Visible = false;
                     AdminPageBtn.Visible = true;
+                    WardenPageBtn.Visible = false;
                     HelloUser.Visible = true; //usnm display button
 
                     HelloUser.Text = "Hello Admin";
@@ -48,6 +50,7 @@ namespace sdtp
 
                     LoginBtn.Visible = false; //lg in  btn
                     landlordPageBtn.Visible = true;
+                    WardenPageBtn.Visible = false;
                     LogOutBtn.Visible = true; //lg out btn
                     HelloUser.Visible = true; //usnm display button
 
@@ -59,10 +62,11 @@ namespace sdtp
                     Hostelsbtn.Visible = true;
                     HomePageBtn.Visible = true;
                     ContactBtnUs.Visible = true;
-
+                   
                     LoginBtn.Visible = false; //lg in  btn
                     LogOutBtn.Visible = true; //lg out btn
                     HelloUser.Visible = true; //usnm display button
+                    WardenPageBtn.Visible = true;
                     HelloUser.Text = "@" + Session["username"].ToString() + " ";
                 }
 
@@ -71,7 +75,7 @@ namespace sdtp
                     Hostelsbtn.Visible = true;
                     HomePageBtn.Visible = true;
                     ContactBtnUs.Visible = true;
-
+                    WardenPageBtn.Visible = false;
                     LoginBtn.Visible = false; //lg in  btn
                     LogOutBtn.Visible = true; //lg out btn
                     HelloUser.Visible = true; //usnm display button
@@ -115,8 +119,9 @@ namespace sdtp
             HelloUser.Visible = false;
             landlordPageBtn.Visible = false;
             AdminPageBtn.Visible = false;
+            WardenPageBtn.Visible = false;
 
-           //celar the sessions and re direct to home page
+            //celar the sessions and re direct to home page
             Session.Clear();
             Response.Redirect("homepage.aspx");
         }
@@ -129,6 +134,11 @@ namespace sdtp
         protected void AdminPageBtn_Click(object sender, EventArgs e)
         {
             Response.Redirect("AdminPage.aspx");
+        }
+
+        protected void WardenPageBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("WardenPage.aspx");
         }
     }
 }

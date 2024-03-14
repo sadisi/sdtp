@@ -17,10 +17,10 @@
     <link rel="stylesheet" href="assets/css/svr.css">
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-
- 
-
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <!-- Datatable Files -->
+  
+    
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -79,42 +79,38 @@
                   <!-- ***** Logo End ***** -->
                   <!-- ***** Menu Start ***** -->
                   <ul class="nav">
-
+                      <li>
+                          <asp:LinkButton ID="landlordPageBtn" Text="landlord page" runat="server" OnClick="landlordPageBtn_Click" Visible="False" />
+                          </asp:LinkedButton>
+                      </li>
                       <li>
                           <asp:LinkButton ID="AdminPageBtn" Text="AdminPage" runat="server" OnClick="AdminPageBtn_Click" Visible="False" />
                           </asp:LinkedButton>
                       </li>
 
                       <li>
-                          <asp:LinkButton ID="landlordPageBtn" Text="landlord page" runat="server" OnClick="landlordPageBtn_Click" Visible="False" />
+                          <asp:LinkButton ID="WardenPageBtn" Text="Warden page" runat="server" OnClick="WardenPageBtn_Click" Visible="False" />
                           </asp:LinkedButton>
                       </li>
-
-
+                      
                       <li class="active">
                           <asp:LinkButton ID="HomePageBtn" Text="Home" runat="server" OnClick="HomePageBtn_Click" />
                           </asp:LinkedButton>
                       </li>
-
-
+                      
                       <li>
                           <asp:LinkButton ID="Hostelsbtn" Text="Hostels" runat="server" />
                           </asp:LinkedButton>
                       </li>
-
-                     
-                     
                       <li>
                           <asp:LinkButton ID="ContactBtnUs" Text="Contact Us" runat="server" />
                           </asp:LinkedButton>
                       </li>
 
                       <li>
-                          <asp:LinkButton ID="HelloUser"  runat="server" />
+                          <asp:LinkButton ID="HelloUser" runat="server" />
                           </asp:LinkedButton>
                       </li>
-
-
 
                       <li>
                           <asp:LinkButton ID="LogOutBtn" Text="LogOut" runat="server" Visible="False" OnClick="LogOutBtn_Click" />
@@ -197,5 +193,7 @@
   <script src="assets/js/counter.js"></script>
   <script src="assets/js/custom.js"></script>
   <script src="assets/js/mapjs.js"></script>
+     <!-- Data table JavaScript -->
+   
 </body>
 </html>

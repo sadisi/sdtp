@@ -1,10 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Web;
 using System.Web.Configuration;
+using System.Web.Http;
+using System.Web.Mvc;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+
+
+
+
 
 namespace sdtp
 {
@@ -18,6 +26,7 @@ namespace sdtp
             // Register the API key as a startup script variable
             Page.ClientScript.RegisterStartupScript(this.GetType(), "GoogleMapsApiKey", $"var googleMapsApiKey = '{googleMapsApiKey}';", true);
         }
-       
     }
+    
+
 }

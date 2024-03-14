@@ -1,6 +1,27 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="landlord.aspx.cs" Inherits="sdtp.landlord" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $(".datatbl").prepend($("<thead></thead>").append($(this).find
+                ("tr.first"))).dataTable();
+        }); 
+
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#imgview').attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+    <link href="DataTables/css/datatables.min.css" rel="stylesheet" />
 </asp:Content>
 
 
@@ -9,105 +30,79 @@
 
 
 
-    <!--add property-->
+      <!--add property-->
     <div class="section best-deal">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="section-heading">
                         <h6>| Landlord</h6>
-                        <h2>Add your new Property details </h2>
+                        <h2>Add your new Property details</h2>
                     </div>
                 </div>
                 <div class="col-lg-12">
                     <div class="tabs-content">
                         <div class="row">
-
                             <div class="tab-content" id="myTabContent">
                                 <div class="tab-pane fade show active" id="appartment" role="tabpanel" aria-labelledby="appartment-tab">
                                     <div class="row">
                                         <div class="col-lg-3">
                                             <div class="info-table">
                                                 <ul>
-                                                    <li>Bedrooms: <span>
-                                                        <asp:TextBox runat="server" ID="BedroomsTextBox" Placeholder="bedrooms count" /></span></li>
-                                                    <li>Bathrooms: <span>
-                                                        <asp:TextBox runat="server" ID="BathroomsTextBox" Placeholder="bathrooms count" /></span></li>
-                                                    <li>Area: <span>
-                                                        <asp:TextBox runat="server" ID="AreaTextBox" Placeholder="area " /></span></li>
-                                                    <li>AC: <span>
-                                                        <asp:TextBox runat="server" ID="ACTextBox" Placeholder="available or not" /></span></li>
-                                                    <li>Your Location latitude : <span>
-                                                        <asp:TextBox runat="server" ID="latitudeTextBox" Placeholder="latitude" /></span></li>
-                                                    <li>Your Location longitude: <span>
-                                                        <asp:TextBox runat="server" ID="longitudetextBox" Placeholder="longitude" /></span></li>
+                                                    <li>Hostel ID: <span>
+                                                        <asp:TextBox runat="server" ID="HostelIDTextBox" /></span></li>
+                                                    <li>Category: <span>
+                                                        <asp:TextBox runat="server" ID="CategoryTextBox" /></span></li>
+                                                    <li>Latitude: <span>
+                                                        <asp:TextBox runat="server" ID="LatitudeTextBox" /></span></li>
+                                                    <li>Longitude: <span>
+                                                        <asp:TextBox runat="server" ID="LongitudeTextBox" /></span></li>
+                                                    <li>Location: <span>
+                                                        <asp:TextBox runat="server" ID="LocationTextBox" /></span></li>
 
                                                 </ul>
-
-                                            
-                                            </div>
-                                        </div>
-
-                                        <!--img-->
-                                        <div class="col-lg-6">
-                                            <label for="imageUpload">Select up to 5 images:</label>
-                                            <asp:FileUpload runat="server" ID="imageUpload" Accept="image/*" Multiple="multiple" />
-                                            <asp:Button runat="server" ID="btnUploadImages" Text="Upload Images" OnClientClick="return showSelectedImages();" />
-
-                                            <div id="selectedImagesContainer">
-                                                <img src="#" alt="" id="selectedImage" style="max-width: 10px; display: none;" />
                                             </div>
 
-                                            <!-- Add hidden input field to store the image path -->
-                                            <input type="hidden" runat="server" id="hiddenImagePath" />
+                                        </div>
+                                        <!-- img -->
+                                        <div class="col-lg-6 ">
 
-                                            <script type="text/javascript">
-                                                function showSelectedImages() {
-                                                    var fileUpload = document.getElementById('<%= imageUpload.ClientID %>');
-                                                    var selectedImage = document.getElementById('selectedImage');
-                                                    var hiddenImagePath = document.getElementById('<%= hiddenImagePath.ClientID %>');
+                                            <asp:FileUpload onchange="readURL(this);" CssClass="form-control" ID="ImageFileUpload" runat="server" />
+                                            <div class="col">
+                                                <br />
+                                                <br />
+                                                <br />
+                                                <center>
 
-                                                    if (fileUpload.files.length > 0) {
-                                                        // Assuming you want to display the first selected image
-                                                        selectedImage.src = URL.createObjectURL(fileUpload.files[0]);
-                                                        selectedImage.style.display = 'block';
+                                                    <img id="imgview" src="assets/hstImg/testimg.jpeg" height="300px" width="100px" style="border-radius: 10px;" />
+                                                </center>
+                                            </div>
 
-                                                        // Update the hidden input field with the image path
-                                                        hiddenImagePath.value = "path_to_uploaded_image_1"; // Update this with the actual image path
-                                                    } else {
-                                                        alert('Please select at least one image.');
-                                                        return false; // Prevent form submission
-                                                    }
-
-                                                    return true; // Allow form submission
-                                                }
-                                            </script>
                                         </div>
 
-
-
-
-
-                                        <!--img end-->
-
-
-
-
-                    
+                                        <!-- img end -->
                                         <div class="col-lg-3">
                                             <h4>Add Information About Property</h4>
-
                                             <div class="icon-button">
-                                                <asp:TextBox runat="server" ID="PropertyDescriptionTextBox" TextMode="MultiLine" placeholder="Add property description" Rows="22" Columns="50"></asp:TextBox>
-                                                <asp:LinkButton runat="server" ID="btnSubmitDescription" CssClass="btn-with-icon" OnClick ="landlordhstAdd_click">
-                                              <i class="fa fa-save"></i> Post
-                                                </asp:LinkButton>
+
+                                                <asp:TextBox runat="server" ID="PropertyDescriptionTextBox" TextMode="MultiLine" Rows="20" Columns="100"></asp:TextBox>
 
                                             </div>
                                         </div>
+
+                                    </div>
+                                    <div class="icon-button">
+                                        <asp:LinkButton runat="server" ID="btnAdd" CssClass="btn-with-icon" OnClick="btnAdd_Click">
+                                        <i class="fa fa-plus"></i> Add
+                                        </asp:LinkButton>
+                                        <asp:LinkButton runat="server" ID="btnUpdate" CssClass="btn-with-icon" OnClick="btnUpdate_Click">
+                                         <i class="fa fa-pencil"></i> Update
+                                        </asp:LinkButton>
+                                        <asp:LinkButton runat="server" ID="btnDelete" CssClass="btn-with-icon" OnClick="btnDelete_Click">
+                                        <i class="fa fa-trash"></i> Delete
+                                        </asp:LinkButton>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -116,77 +111,70 @@
         </div>
     </div>
     <!--add property end -->
-
-    <!--previous property -->
-    <div class="properties section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 offset-lg-4">
-                    <div class="section-heading text-center">
-                        <h6>| Your previously add Properties</h6>
-
-                    </div>
+    <!-- Previous property -->
+    <div class="container section">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="section-heading text-center">
+                    <h6>| Your Previously Added Properties</h6>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="item">
-                        <a href="hostel-details.aspx">
-                            <img src="assets/images/vilo.png" alt=""></a>
-                        <span class="category">Hostel</span>
-                        <h6>Rs.65000/=</h6>
-                        <h4><a href="hostel-details.aspx">Makubura,Homagama</a></h4>
-                        <ul>
-                            <li>Bedrooms: <span>6</span></li>
-                            <li>Bathrooms: <span>5</span></li>
-                            <li>Area: <span>450m2</span></li>
-                            <li>AC: <span>No</span></li>
-                        </ul>
-                        <div class="main-button">
-                            <a href="property-details.html"><i class="fa-solid fa-pen-to-square"></i>&nbsp Update</a>
-                            <a href="property-details.html"><i class="fa-solid fa-trash"></i>&nbsp Delete</a>
-                            <a href="property-details.html"><i class="fa-solid fa-circle-check"></i>&nbsp Save</a>
-                        </div>
-
-
-
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="item">
-                        <a href="hostel-details.aspx">
-                            <img src="assets/images/vilo.png" alt=""></a>
-                        <span class="category">Hostel</span>
-                        <h6>Rs.55000/=</h6>
-                        <h4><a href="hostel-details.aspx">Pitipana, Homagama</a></h4>
-                        <ul>
-                            <li>Bedrooms: <span>6</span></li>
-                            <li>Bathrooms: <span>5</span></li>
-                            <li>Area: <span>450m2</span></li>
-                            <li>AC: <span>No</span></li>
-                        </ul>
-                        <div class="main-button">
-                            <a href="property-details.html"><i class="fa-solid fa-pen-to-square"></i>&nbsp Update</a>
-                            <a href="property-details.html"><i class="fa-solid fa-trash"></i>&nbsp  Delete</a>
-                            <a href="property-details.html"><i class="fa-solid fa-circle-check"></i>&nbsp Save</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <!--lanlord pp show 1-->
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <!--lanlord pp show 2-->
-                </div>
-
-
             </div>
         </div>
-    </div>
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="item">
+                   <!--Data sources-->
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:landlordPage %>' ProviderName='<%$ ConnectionStrings:landlordPage.ProviderName %>' SelectCommand="SELECT * FROM [LandlordPPtbl] WHERE ([username] = @username)">
+                        <SelectParameters>
+                            <asp:SessionParameter SessionField="username" Name="username" Type="String"></asp:SessionParameter>
+
+                        </SelectParameters>
+                    </asp:SqlDataSource>
+                     <!--Data sources end-->
+                    <div class="col">
+                        <div class="scrollbar">
+                            <!--Gried view-->
+                            <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="pp_id" DataSourceID="SqlDataSource1" AllowPaging="True">
+                                <Columns>
+                                    <asp:BoundField DataField="pp_id" HeaderText="Hostel ID" ReadOnly="True" SortExpression="pp_id"></asp:BoundField>
+                                    <asp:BoundField DataField="pp_category" HeaderText="Category" SortExpression="pp_category"></asp:BoundField>
+                                    <asp:BoundField DataField="pp_location" HeaderText="Location" SortExpression="pp_location"></asp:BoundField>
+                                    <asp:BoundField DataField="pp_longitude" HeaderText="Longitude" SortExpression="pp_longitude"></asp:BoundField>
+                                    <asp:BoundField DataField="pp_latitude" HeaderText="Latitude" SortExpression="pp_latitude"></asp:BoundField>
+                                    <asp:BoundField DataField="pp_description" HeaderText="Description" SortExpression="pp_description"></asp:BoundField>
+                                   <asp:BoundField DataField="pp_status" HeaderText="Status" SortExpression="status"></asp:BoundField>
+                                    <asp:TemplateField>
+
+                                        <ItemTemplate>
+                                            <div class="container-fluid">
+                                                <div class="row">
+
+                                                    <div class="col-lg-6">
+                                                        <asp:Image class="img-fluid" ID="Image1" runat="server" ImageUrl='<%# Eval("pp_img_url") %>' />
+                                                    </div>
+                                                    
+                                                </div>
+                                                 
+                                            </div>
+                                        </ItemTemplate>
+
+                                    </asp:TemplateField>
+
+                                </Columns>
+                              </asp:GridView>
+
+                               <!--Gried view end-->
+                              </div>  
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Previous add property end -->
 
 
-
-    <!--previous add property end-->
+        <!--previous add property end-->
 
     <div class="contact section">
         <div class="container">
@@ -317,6 +305,6 @@
         </div>
     </div>
 
-
-
+        <script src="DataTables/js/datatables.min.js"></script>
+        <script src="DataTables/js/datatables.js"></script>
 </asp:Content>

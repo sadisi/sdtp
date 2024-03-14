@@ -15,85 +15,58 @@ namespace sdtp
     {
 
         /// <summary>
-        /// BedroomsTextBox control.
+        /// HostelIDTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox BedroomsTextBox;
+        protected global::System.Web.UI.WebControls.TextBox HostelIDTextBox;
 
         /// <summary>
-        /// BathroomsTextBox control.
+        /// CategoryTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox BathroomsTextBox;
+        protected global::System.Web.UI.WebControls.TextBox CategoryTextBox;
 
         /// <summary>
-        /// AreaTextBox control.
+        /// LatitudeTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AreaTextBox;
+        protected global::System.Web.UI.WebControls.TextBox LatitudeTextBox;
 
         /// <summary>
-        /// ACTextBox control.
+        /// LongitudeTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ACTextBox;
+        protected global::System.Web.UI.WebControls.TextBox LongitudeTextBox;
 
         /// <summary>
-        /// latitudeTextBox control.
+        /// LocationTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox latitudeTextBox;
+        protected global::System.Web.UI.WebControls.TextBox LocationTextBox;
 
         /// <summary>
-        /// longitudetextBox control.
+        /// ImageFileUpload control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox longitudetextBox;
-
-        /// <summary>
-        /// imageUpload control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload imageUpload;
-
-        /// <summary>
-        /// btnUploadImages control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnUploadImages;
-
-        /// <summary>
-        /// hiddenImagePath control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputHidden hiddenImagePath;
+        protected global::System.Web.UI.WebControls.FileUpload ImageFileUpload;
 
         /// <summary>
         /// PropertyDescriptionTextBox control.
@@ -105,12 +78,48 @@ namespace sdtp
         protected global::System.Web.UI.WebControls.TextBox PropertyDescriptionTextBox;
 
         /// <summary>
-        /// btnSubmitDescription control.
+        /// btnAdd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnSubmitDescription;
+        protected global::System.Web.UI.WebControls.LinkButton btnAdd;
+
+        /// <summary>
+        /// btnUpdate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnUpdate;
+
+        /// <summary>
+        /// btnDelete control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnDelete;
+
+        /// <summary>
+        /// SqlDataSource1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+
+        /// <summary>
+        /// GridView1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }
