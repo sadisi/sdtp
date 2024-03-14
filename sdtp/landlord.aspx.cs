@@ -87,10 +87,11 @@ namespace sdtp
                     con.Open();
                 }
 
-                SqlCommand cmd = new SqlCommand("INSERT INTO LandlordPPtbl (username, pp_id, pp_category, pp_location, pp_longitude, pp_latitude, pp_description, pp_img_url, pp_status) VALUES (@Username, @HostelIDTextBox, @CategoryTextBox, @LocationTextBox, @LongitudeTextBox, @LatitudeTextBox, @PropertyDescriptionTextBox, @ImageFileUpload, @Status)", con);    
+                SqlCommand cmd = new SqlCommand("INSERT INTO LandlordPPtbl (username, pp_id, pp_category, pp_price, pp_location, pp_longitude, pp_latitude, pp_description, pp_img_url, pp_status) VALUES (@Username, @HostelIDTextBox, @CategoryTextBox, @PriceTxtBox, @LocationTextBox, @LongitudeTextBox, @LatitudeTextBox, @PropertyDescriptionTextBox, @ImageFileUpload, @Status)", con);    
                 cmd.Parameters.AddWithValue("@Username", Session["username"]);
                 cmd.Parameters.AddWithValue("@HostelIDTextBox", HostelIDTextBox.Text.Trim());
                 cmd.Parameters.AddWithValue("@CategoryTextBox", CategoryTextBox.Text.Trim());
+                cmd.Parameters.AddWithValue("@PriceTxtBox", PriceTxtBox.Text.Trim());
                 cmd.Parameters.AddWithValue("@LocationTextBox", LocationTextBox.Text.Trim());
                 cmd.Parameters.AddWithValue("@LongitudeTextBox", LongitudeTextBox.Text.Trim());
                 cmd.Parameters.AddWithValue("@LatitudeTextBox", LatitudeTextBox.Text.Trim());
@@ -156,6 +157,13 @@ namespace sdtp
                         updateQuery.Append("pp_category = @CategoryTextBox, ");
                         cmd.Parameters.AddWithValue("@CategoryTextBox", CategoryTextBox.Text.Trim());
                     }
+                    // Check Price is entered
+                    if (!string.IsNullOrEmpty(PriceTxtBox.Text.Trim()))
+                    {
+                        updateQuery.Append("pp_price = @PriceTxtBox, ");
+                        cmd.Parameters.AddWithValue("@PriceTxtBox", PriceTxtBox.Text.Trim());
+                    }
+
 
                     // Check if location is entered
                     if (!string.IsNullOrEmpty(LocationTextBox.Text.Trim()))
@@ -264,6 +272,7 @@ namespace sdtp
         {
             HostelIDTextBox.Text = "";
             CategoryTextBox.Text = "";
+            PriceTxtBox.Text = "";
             LocationTextBox.Text = "";
             LongitudeTextBox.Text = "";
             LatitudeTextBox.Text = "";

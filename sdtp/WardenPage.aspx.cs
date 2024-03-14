@@ -60,7 +60,7 @@ namespace sdtp
                     con.Open();
                 }
 
-                SqlCommand cmd = new SqlCommand("SELECT * FROM wardenPPdetails WHERE wpp_id = '" + txtHostelIDBox.Text.Trim() + "'", con);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM LandlordPPtbl WHERE pp_id = '" + txtHostelIDBox.Text.Trim() + "'", con);
 
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();

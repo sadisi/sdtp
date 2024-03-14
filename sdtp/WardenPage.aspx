@@ -11,7 +11,7 @@
                 <div class="col-lg-4 offset-lg-4">
                     <div class="section-heading text-center">
                         <h6>| Properties</h6>
-                        <h2>We Provide The Best Property You Like</h2>
+                        <h2>Warden Page</h2>
                     </div>
                 </div>
             </div>
@@ -25,7 +25,7 @@
                         <ul>
                             <!-- Add Hostel ID input -->
                             <li>Hostel ID:
-                    <asp:TextBox runat="server" ID="txtHostelIDBox" Class="form-control" placeholder="Enter hostel ID" />
+                                 <asp:TextBox runat="server" ID="txtHostelIDBox" Class="form-control" placeholder="Enter hostel ID" />
                             </li>
                         </ul>
                         <div class="main-button">
@@ -57,6 +57,7 @@
                         <Columns>
                             <asp:BoundField DataField="pp_id" HeaderText="Hostel ID" ReadOnly="True" SortExpression="pp_id"></asp:BoundField>
                             <asp:BoundField DataField="pp_category" HeaderText="Category" SortExpression="pp_category"></asp:BoundField>
+                            <asp:BoundField DataField="pp_price" HeaderText="Price" SortExpression="pp_price"></asp:BoundField>
                             <asp:BoundField DataField="pp_location" HeaderText="Location" SortExpression="pp_location"></asp:BoundField>
                             <asp:BoundField DataField="pp_longitude" HeaderText="Longitude" SortExpression="pp_longitude"></asp:BoundField>
                             <asp:BoundField DataField="pp_latitude" HeaderText="Latitude" SortExpression="pp_latitude"></asp:BoundField>

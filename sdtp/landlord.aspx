@@ -50,15 +50,17 @@
                                             <div class="info-table">
                                                 <ul>
                                                     <li>Hostel ID: <span>
-                                                        <asp:TextBox runat="server" ID="HostelIDTextBox" /></span></li>
+                                                        <asp:TextBox runat="server" ID="HostelIDTextBox" placeholder="Hostel ID" /></span></li>
                                                     <li>Category: <span>
-                                                        <asp:TextBox runat="server" ID="CategoryTextBox" /></span></li>
+                                                        <asp:TextBox runat="server" ID="CategoryTextBox" placeholder="Category" /></span></li>
+                                                    <li>Price: <span>
+                                                        <asp:TextBox runat="server" ID="PriceTxtBox" placeholder="100000"/></span></li>
                                                     <li>Latitude: <span>
-                                                        <asp:TextBox runat="server" ID="LatitudeTextBox" /></span></li>
+                                                        <asp:TextBox runat="server" ID="LatitudeTextBox" placeholder="Latitude" /></span></li>
                                                     <li>Longitude: <span>
-                                                        <asp:TextBox runat="server" ID="LongitudeTextBox" /></span></li>
+                                                        <asp:TextBox runat="server" ID="LongitudeTextBox" placeholder="Longitude" /></span></li>
                                                     <li>Location: <span>
-                                                        <asp:TextBox runat="server" ID="LocationTextBox" /></span></li>
+                                                        <asp:TextBox runat="server" ID="LocationTextBox" placeholder="Location" /></span></li>
 
                                                 </ul>
                                             </div>
@@ -139,6 +141,7 @@
                                 <Columns>
                                     <asp:BoundField DataField="pp_id" HeaderText="Hostel ID" ReadOnly="True" SortExpression="pp_id"></asp:BoundField>
                                     <asp:BoundField DataField="pp_category" HeaderText="Category" SortExpression="pp_category"></asp:BoundField>
+                                    <asp:BoundField DataField="pp_price" HeaderText="Price" SortExpression="pp_price"></asp:BoundField>
                                     <asp:BoundField DataField="pp_location" HeaderText="Location" SortExpression="pp_location"></asp:BoundField>
                                     <asp:BoundField DataField="pp_longitude" HeaderText="Longitude" SortExpression="pp_longitude"></asp:BoundField>
                                     <asp:BoundField DataField="pp_latitude" HeaderText="Latitude" SortExpression="pp_latitude"></asp:BoundField>
