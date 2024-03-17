@@ -1876,7 +1876,7 @@ a {
 
     .map-button:hover {
         transition: all 0.8s ease;
-        background-color: #2e0303;
+        background-color: #010101;
     }
 
 
@@ -1961,7 +1961,7 @@ label[for="imageUpload"] {
 
 
 item-color {
-    background-color: f0f0f0;
+    background-color: #f0f0f0;
 }
 
 

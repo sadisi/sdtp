@@ -276,7 +276,33 @@ namespace sdtp
 
         }
 
+        protected void ArticleUploadBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(strcon))
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("INSERT INTO adminArticle (admin_username, admin_article) VALUES (@adminUsername, @adminArticle)", con);
+                    cmd.Parameters.AddWithValue("@adminUsername", Session["username"]);
+                    cmd.Parameters.AddWithValue("@adminArticle", ArticleTextBox.Text.Trim());
 
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    clearArticleFeilds();
+                }
+                Response.Write("<script>alert('Your Article published Success fully !')</script>");
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + "');</script>");
+            }
+        }
 
+        void clearArticleFeilds()
+        {
+            ArticleTextBox.Text = "";
+        }
     }
+    
 }

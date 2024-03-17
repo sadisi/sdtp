@@ -174,7 +174,7 @@ namespace sdtp
                         Session["username"] = dr.GetValue(2).ToString();
                         Session["role"] = "student";
                     }
-                    Response.Redirect("homepage.aspx");
+                    Response.Redirect("studentPage.aspx");
                 }
                 else
                 {

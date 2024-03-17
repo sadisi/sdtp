@@ -54,7 +54,7 @@
                                             <h4>Extra Info About Property</h4>
                                             <p>
                                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse. 
-                      <br>
+                                                 <br>
                                                 <br>
                                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse
                                             </p>
@@ -134,8 +134,8 @@
             <div class="row">
                 <div class="col-lg-4 offset-lg-4">
                     <div class="section-heading text-center">
-                        <h6>| Properties</h6>
-                        <h2>We Provide The Best Property You Like</h2>
+                        <h6>| Hostels / Houses</h6>
+                        <h2>We Provide The Best Hostels You Like</h2>
                     </div>
                 </div>
             </div>
@@ -147,30 +147,40 @@
                     // Function to generate HTML for each property
                     function generatePropertyHTML(property) {
                         return `
-<div class="col-lg-4 col-md-6">
-    <div class="item">
-        <a href="#"><img src="${property.imageUrl}" alt=""></a>
-        <span class="category">${property.category}</span>
-        <h6>Rs.${property.price}/=</h6>
-        <h4><a href="#x">${property.location}</a></h4> <!-- Change property name to 'location' -->
-        <ul>
-            <li>Description: <span>${property.description}</span></li>
-            <!-- Add other details as needed -->
-        </ul>
-        <div class="main-button">
-            <a href="property-details.html">See More</a>
-        </div>
-    </div>
-</div>
-`;
-                    }
+                             <div class="col-lg-4 col-md-6">
+                             <div class="item">
+                             <a href="#"><img src="${property.imageUrl}" alt=""></a>
+                             <span class="category">${property.category}</span>
+                             <h6>Rs.${property.price}/=</h6>
+                             <h4><a href="#x">${property.location}</a></h4> 
+                                <ul>
+                                   <li>Description: <br> <span>${property.description}</span></li>
+                                    
+                                </ul>
+                                <ul>
+                                <li>
+                                   <asp:TextBox ID="messageBox" runat="server" placeholder="Enter message here..."></asp:TextBox>
+                               </li>
+          
+                              </ui>
+                                     <asp:Button ID="submitButton" runat="server" Text="Send"  class="map-button" />
+                               <hr>
+                               <div class="main-button">
+                                 <a href="#">See more</a>
+                                </div>
+                                  </div>
 
+                                </div>
+                              `;
+                    }
+               
+  
                     // Wait for the DOM to be fully loaded
                     document.addEventListener('DOMContentLoaded', function () {
                         var propertyContainer = document.getElementById('property-container');
 
                         // Loop through the properties and generate HTML for each one
-                        propertyData.forEach(function (property) { // Change variable name to 'propertyData'
+                        propertyData.forEach(function (property) { 
                             propertyContainer.innerHTML += generatePropertyHTML(property);
                         });
                     });
@@ -202,12 +212,12 @@
                 <div class="col-lg-7">
                     <!--map-->
                     <!--map-->
-                    <div id="map" style="width: 1300px; height: 700px; border: 0; border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);">
+                    <div id="map" style="width: 1300px; height: 700px; border: 0; border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);"></div>
                         <script>
                             // Initialize and add the map
                             let map;
                             let currentInfowindow;
-
+                          
                             async function initMap() {
                                 // Request needed libraries.
                                 const { Map } = await google.maps.importLibrary("maps");
@@ -221,8 +231,8 @@
                                     mapTypeId: 'satellite',
                                 });
 
-                                // Array of locations
-                                const locations = mapLocations; // Assuming mapLocations is the variable containing location details received from the backend
+                                // Assuming mapLocations is the variable containing location details received from the backend
+                                const locations = mapLocations; 
 
                                 // Loop through the locations array and add markers
                                 locations.forEach(location => {
@@ -234,18 +244,23 @@
 
                                     // Construct the HTML content for the infowindow
                                     const content = `
-                                                   <div id="info-window-content">
-                                                   <img src="${location.imageUrl}" alt="Image 1" style="max-width: 100px; max-height: 100px;">
-                                                   <span class="category">${location.category}</span>
-                                                   <h6>Rs.${location.price}/=</h6>
-                                                   <p>${location.description}</p><hr>
-                                                   <div class="main-button"><center>
-                                                   <a href="#">See More</a></center>
-                                                   </div><hr>
-                                                   <input type="text" id="input1" placeholder="Enter text">
-                                                   <button class="map-button">Submit</button>
-                                                    </div>
+                                                 <div id="info-window-content">
+                                                 <img src="${location.imageUrl}" alt="Image 1" style="max-width: 300px; max-height: 300px;border-radius: 5px; ">
+                                                 <br><br>
+                                                 <span class="category">${location.category}</span><br><br>
+                                                 <h6>Price = Rs.${location.price}/=</h6><hr>
+                                                 <p>${location.description}</p>
+                                                  <hr>
+                                                 <div class="main-button">
+                                                  <center>
+                                                 <a href="#">See More</a>
+                                                 </center>
+                                                 </div>
+                                                </div>
+
                                                       `;
+
+
 
                                     const infowindow = new google.maps.InfoWindow({
                                         content: content
@@ -277,8 +292,11 @@
                                 const inputValue = document.getElementById(inputId).value;
                                 alert('Submitted value: ' + inputValue);
                             }
+                            
                         </script>
+                       
                         <!--map-->
+
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="item phone">
@@ -290,14 +308,12 @@
                             <div class="col-lg-6">
                                 <div class="item email">
                                     <img src="assets/images/email-icon.png" alt="" style="max-width: 52px;">
-                                    <h6>info@HstNSBM.co<br>
+                                    <h6>Hostels@gmail.com<br>
                                         <span>Business Email</span></h6>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>

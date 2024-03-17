@@ -76,6 +76,8 @@ namespace sdtp
                     HomePageBtn.Visible = true;
                     ContactBtnUs.Visible = true;
                     WardenPageBtn.Visible = false;
+
+                    StudentpageBtn.Visible = true;
                     LoginBtn.Visible = false; //lg in  btn
                     LogOutBtn.Visible = true; //lg out btn
                     HelloUser.Visible = true; //usnm display button
@@ -101,6 +103,11 @@ namespace sdtp
         }
 
 
+        protected void StudentpageBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("studentPage.aspx");
+        }
+
         //logout
         protected void LogOutBtn_Click(object sender, EventArgs e)
         {
@@ -120,6 +127,7 @@ namespace sdtp
             landlordPageBtn.Visible = false;
             AdminPageBtn.Visible = false;
             WardenPageBtn.Visible = false;
+            StudentpageBtn.Visible = false;
 
             //celar the sessions and re direct to home page
             Session.Clear();

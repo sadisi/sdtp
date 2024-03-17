@@ -99,11 +99,11 @@
                                 <h4>Add Article</h4>
                                 <div class="icon-button">
 
-                                    <asp:TextBox runat="server" ID="ArticleTextBox" TextMode="MultiLine" Rows="20" Columns="100"></asp:TextBox>
+                                    <asp:TextBox runat="server" ID="ArticleTextBox" TextMode="MultiLine" Rows="20"  Columns="50"></asp:TextBox>
 
                                 </div>
                                 <div class="icon-button">
-                                    <asp:LinkButton runat="server" ID="ArticleUploadBtn" CssClass="btn btn-with-icon">
+                                    <asp:LinkButton runat="server" ID="ArticleUploadBtn" CssClass="btn btn-with-icon" OnClientClick="ArticleUploadBtn_Click" OnClick="ArticleUploadBtn_Click">
                                     <i class="fas fa-upload"></i> Publish Article
                                     </asp:LinkButton>
                                 </div>

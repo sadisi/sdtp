@@ -7,6 +7,8 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Web;
+using System.Web.Configuration;
+using System.Web.Script.Serialization;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -15,6 +17,73 @@ namespace sdtp
     public partial class landlord : System.Web.UI.Page
     {
         String strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
+
+        //page load
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            // Retrieve the Google Maps API key from the appSettings section in web.config
+            string googleMapsApiKey = WebConfigurationManager.AppSettings["GoogleMapsApiKey"];
+
+            // Register the API key as a startup script variable
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "GoogleMapsApiKey", $"var googleMapsApiKey = '{googleMapsApiKey}';", true);
+
+            // Establish connection to the database using the provided connection string
+            string connectionString = "Data Source=DESKTOP-PAO1EML;Initial Catalog=nsbmSdtpDB;Integrated Security=True";
+
+            // List to store location data retrieved from the database
+            List<object> locations = new List<object>();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                // Define your SQL query to retrieve data from the database
+                string query = "SELECT * FROM LandlordPPtbl WHERE pp_status = 'Active' AND username = @Username";
+
+                // Open the database connection
+                connection.Open();
+
+                // Define the SqlCommand object and add parameters to it
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    // Add parameters to the command
+                    command.Parameters.AddWithValue("@Username", Session["username"]);
+
+                    // Execute the query and retrieve the data
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            var filename = Path.GetFileName(reader["pp_img_url"].ToString());
+                            var location = new
+                            {
+                                lat = reader.IsDBNull(reader.GetOrdinal("pp_latitude")) ?
+                                        (decimal?)null : Convert.ToDecimal(reader["pp_latitude"]),
+                                lng = reader.IsDBNull(reader.GetOrdinal("pp_longitude")) ?
+                                        (decimal?)null : Convert.ToDecimal(reader["pp_longitude"]),
+                                title = reader["pp_location"].ToString(),
+                                imageUrl = $"hstImg/{filename}",
+                                description = reader["pp_description"].ToString(),
+                                price = reader["pp_price"].ToString(),
+                                category = reader["pp_category"].ToString()
+                            };
+
+                            locations.Add(location);
+                        }
+                    }
+                }
+            }
+
+            // Serialize the list to JSON
+            string locationsJson = new JavaScriptSerializer().Serialize(locations);
+
+            // Register the locations as a startup script variable
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "MapLocations", $"var mapLocations = {locationsJson};", true);
+        }
+
+
+
+        //page load end
+
+
 
         protected void HomePageBtn_Click(object sender, EventArgs e)
         {

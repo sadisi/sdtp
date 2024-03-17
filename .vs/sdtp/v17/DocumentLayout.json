@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "E:\\NSBM project\\sdtp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|e:\\nsbm project\\sdtp\\sdtp\\adminpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|solutionrelative:sdtp\\adminpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|e:\\nsbm project\\sdtp\\sdtp\\adminpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|solutionrelative:sdtp\\adminpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|e:\\nsbm project\\sdtp\\sdtp\\studentpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|solutionrelative:sdtp\\studentpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|e:\\nsbm project\\sdtp\\sdtp\\homepage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|solutionrelative:sdtp\\homepage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|E:\\NSBM project\\sdtp\\sdtp\\homepage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|solutionrelative:sdtp\\homepage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|e:\\nsbm project\\sdtp\\sdtp\\studentpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|solutionrelative:sdtp\\studentpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|e:\\nsbm project\\sdtp\\sdtp\\landlord.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|solutionrelative:sdtp\\landlord.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|e:\\nsbm project\\sdtp\\sdtp\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A746D9D6-2EB3-448A-941D-B17E972A165A}|sdtp\\sdtp.csproj|solutionrelative:sdtp\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,24 +34,37 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "landlord.aspx.cs",
-              "DocumentMoniker": "E:\\NSBM project\\sdtp\\sdtp\\landlord.aspx.cs",
-              "RelativeDocumentMoniker": "sdtp\\landlord.aspx.cs",
-              "ToolTip": "E:\\NSBM project\\sdtp\\sdtp\\landlord.aspx.cs",
-              "RelativeToolTip": "sdtp\\landlord.aspx.cs",
-              "ViewState": "AQIAAFAAAAAAAAAAAAAIwG8AAAANAAAA",
+              "DocumentIndex": 0,
+              "Title": "AdminPage.aspx.cs",
+              "DocumentMoniker": "E:\\NSBM project\\sdtp\\sdtp\\AdminPage.aspx.cs",
+              "RelativeDocumentMoniker": "sdtp\\AdminPage.aspx.cs",
+              "ToolTip": "E:\\NSBM project\\sdtp\\sdtp\\AdminPage.aspx.cs",
+              "RelativeToolTip": "sdtp\\AdminPage.aspx.cs",
+              "ViewState": "AQIAAAoBAAAAAAAAAAAkwBUBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-16T19:57:18.629Z",
+              "WhenOpened": "2024-03-17T20:36:44.317Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "AdminPage.aspx",
+              "DocumentMoniker": "E:\\NSBM project\\sdtp\\sdtp\\AdminPage.aspx",
+              "RelativeDocumentMoniker": "sdtp\\AdminPage.aspx",
+              "ToolTip": "E:\\NSBM project\\sdtp\\sdtp\\AdminPage.aspx",
+              "RelativeToolTip": "sdtp\\AdminPage.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-03-17T19:58:20.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "HomePage.aspx",
               "DocumentMoniker": "E:\\NSBM project\\sdtp\\sdtp\\HomePage.aspx",
               "RelativeDocumentMoniker": "sdtp\\HomePage.aspx",
@@ -47,20 +72,46 @@
               "RelativeToolTip": "sdtp\\HomePage.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-03-16T18:48:55.989Z",
+              "WhenOpened": "2024-03-17T19:42:01.487Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HomePage.aspx.cs",
-              "DocumentMoniker": "E:\\NSBM project\\sdtp\\sdtp\\HomePage.aspx.cs",
-              "RelativeDocumentMoniker": "sdtp\\HomePage.aspx.cs",
-              "ToolTip": "E:\\NSBM project\\sdtp\\sdtp\\HomePage.aspx.cs",
-              "RelativeToolTip": "sdtp\\HomePage.aspx.cs",
-              "ViewState": "AQIAAF0AAAAAAAAAAAAQwGoAAABMAAAA",
+              "DocumentIndex": 5,
+              "Title": "Login.aspx.cs",
+              "DocumentMoniker": "E:\\NSBM project\\sdtp\\sdtp\\Login.aspx.cs",
+              "RelativeDocumentMoniker": "sdtp\\Login.aspx.cs",
+              "ToolTip": "E:\\NSBM project\\sdtp\\sdtp\\Login.aspx.cs",
+              "RelativeToolTip": "sdtp\\Login.aspx.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAF8AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T07:50:43.219Z",
+              "WhenOpened": "2024-03-17T19:39:18.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "studentPage.aspx.cs",
+              "DocumentMoniker": "E:\\NSBM project\\sdtp\\sdtp\\studentPage.aspx.cs",
+              "RelativeDocumentMoniker": "sdtp\\studentPage.aspx.cs",
+              "ToolTip": "E:\\NSBM project\\sdtp\\sdtp\\studentPage.aspx.cs",
+              "RelativeToolTip": "sdtp\\studentPage.aspx.cs",
+              "ViewState": "AQIAAHkAAAAAAAAAAAAiwJUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-17T16:36:30.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "studentPage.aspx",
+              "DocumentMoniker": "E:\\NSBM project\\sdtp\\sdtp\\studentPage.aspx",
+              "RelativeDocumentMoniker": "sdtp\\studentPage.aspx",
+              "ToolTip": "E:\\NSBM project\\sdtp\\sdtp\\studentPage.aspx",
+              "RelativeToolTip": "sdtp\\studentPage.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-03-17T16:30:51.207Z",
               "EditorCaption": ""
             }
           ]

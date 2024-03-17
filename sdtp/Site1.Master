@@ -92,12 +92,16 @@
                           <asp:LinkButton ID="WardenPageBtn" Text="Warden page" runat="server" OnClick="WardenPageBtn_Click" Visible="False" />
                           </asp:LinkedButton>
                       </li>
-                      
+                      <li>
+                          <asp:LinkButton ID="StudentpageBtn" Text="Student page" runat="server" OnClick="StudentpageBtn_Click" Visible="False" />
+                          </asp:LinkedButton>
+                      </li>
+
                       <li class="active">
                           <asp:LinkButton ID="HomePageBtn" Text="Home" runat="server" OnClick="HomePageBtn_Click" />
                           </asp:LinkedButton>
                       </li>
-                      
+
                       <li>
                           <asp:LinkButton ID="Hostelsbtn" Text="Hostels" runat="server" />
                           </asp:LinkedButton>
