@@ -348,5 +348,148 @@ namespace sdtp
             PropertyDescriptionTextBox.Text = "";
         }
 
+
+        //landolord student feedback section
+
+
+        //approve button
+        protected void StFeedApproveBtn_Click(object sender, EventArgs e)
+        {
+
+            if (checkStMsgIDlIDExist())
+            {
+                ApproveStMsgDetails();
+
+            }
+            else
+            {
+                Response.Write("<script>alert('Your message ID Not in Our Database. Check your ID')</script>");
+            }
+
+        }
+
+
+        //remove button
+        protected void StFeedRemoveBtn_Click(object sender, EventArgs e)
+        {
+            if (checkStMsgIDlIDExist())
+            {
+                DeleteMsgDetails();
+            }
+            else
+            {
+                Response.Write("<script>alert('Your Message ID Not in Our Database. Check your ID')</script>");
+
+            }
+        }
+
+
+        bool checkStMsgIDlIDExist()
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(strcon);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+
+                SqlCommand cmd = new SqlCommand("SELECT * FROM studentMessages WHERE msg_id = '" + MessageIDTxtBox.Text.Trim() + "'", con);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + "');</script>");
+                return false;
+            }
+        }
+
+
+
+        void ApproveStMsgDetails()
+        {
+            try
+            {
+                
+                if (string.IsNullOrWhiteSpace(MessageIDTxtBox.Text))
+                {
+                    Response.Write("<script>alert('Please enter a Message ID');</script>");
+                    return; 
+                }
+
+                SqlConnection con = new SqlConnection(strcon);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+
+                SqlCommand cmdn = new SqlCommand("UPDATE studentMessages SET status = @MsgStatus WHERE msg_id = @MsgID", con);
+                cmdn.Parameters.AddWithValue("@MsgStatus", "Approved by " + Session["username"]);
+                cmdn.Parameters.AddWithValue("@MsgID", MessageIDTxtBox.Text.Trim());
+                cmdn.ExecuteNonQuery();
+
+
+                con.Close();
+                Response.Write("<script>alert(' You approved a Student message !')</script>");
+                GridView2.DataBind();
+
+                ClearInputs();
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + "');</script>");
+            }
+        }
+
+
+
+        void DeleteMsgDetails()
+        {
+            try
+            {
+                // Check if txtHostelIDBox is not empty
+                if (string.IsNullOrWhiteSpace(MessageIDTxtBox.Text))
+                {
+                    Response.Write("<script>alert('Please enter a Message ID');</script>");
+                    return; // Exit the method if Hostel ID is empty
+                }
+
+                SqlConnection con = new SqlConnection(strcon);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+
+                SqlCommand cmd = new SqlCommand("DELETE FROM studentMessages WHERE msg_id = @MsgId ", con);
+                cmd.Parameters.AddWithValue("@MsgId", MessageIDTxtBox.Text.Trim());
+
+                cmd.ExecuteNonQuery();
+                con.Close();
+                Response.Write("<script>alert('Message ID " + MessageIDTxtBox.Text.Trim() + "Details Deleted !')</script>");
+                GridView2.DataBind();
+
+                ClearInputs();
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + "');</script>");
+            }
+        }
+
+        void ClearInputs()
+        {
+            MessageIDTxtBox.Text = "";
+        }
     }
 }

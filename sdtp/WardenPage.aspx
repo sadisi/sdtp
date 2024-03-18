@@ -10,7 +10,7 @@
             <div class="row">
                 <div class="col-lg-4 offset-lg-4">
                     <div class="section-heading text-center">
-                        <h6>| Properties</h6>
+                        <h6>| Welcome to </h6>
                         <h2>Warden Page</h2>
                     </div>
                 </div>
@@ -29,26 +29,16 @@
                             </li>
                         </ul>
                         <div class="main-button">
-                            <!-- Add Font Awesome icons to buttons -->
-                          
+
                             <asp:LinkButton runat="server" ID="LinkButton1" Text='<span class="fa fa-check"></span> Approve' OnClick="ApproveBtn_Click" CssClass="btn" />
                             <asp:LinkButton runat="server" ID="LinkButton2" Text='<span class="fa fa-trash"></span> Remove' OnClick="RemoveBtn_Click" CssClass="btn " />
 
-
                         </div>
-
-                        <!-- Add GridView to display data -->
-
-                        <!-- Define your data source and columns here -->
-
-                    </div>
+                   </div>
                 </div>
 
             </div>
 
-            <!--Data sources-->
-
-            <!--Data sources end-->
             <div class="col">
                 <div class="scrollbar">
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:landLordPageTableForWardenPageAccess %>' ProviderName='<%$ ConnectionStrings:landLordPageTableForWardenPageAccess.ProviderName %>' SelectCommand="SELECT * FROM [LandlordPPtbl]"></asp:SqlDataSource>
@@ -80,12 +70,8 @@
                             </asp:TemplateField>
                         </Columns>
                     </asp:GridView>
-                    <!--Gried view end-->
-                    <!---->
                 </div>
             </div>
-
-            <!--hostel Grid end-->
 
             <div class="contact section">
                 <div class="container">
@@ -99,9 +85,6 @@
                     </div>
                 </div>
             </div>
-  
-
-            
    <!--map section-->
  <div class="contact-content">
      <div class="container">
@@ -156,9 +139,6 @@
                                              </div>
 
                                                    `;
-
-
-
                                  const infowindow = new google.maps.InfoWindow({
                                      content: content
                                  });
@@ -191,7 +171,6 @@
                          }
 
                      </script>
-
                  <!--map-->
              </div>
          </div>

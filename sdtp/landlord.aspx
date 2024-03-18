@@ -146,7 +146,7 @@
                                     <asp:BoundField DataField="pp_longitude" HeaderText="Longitude" SortExpression="pp_longitude"></asp:BoundField>
                                     <asp:BoundField DataField="pp_latitude" HeaderText="Latitude" SortExpression="pp_latitude"></asp:BoundField>
                                     <asp:BoundField DataField="pp_description" HeaderText="Description" SortExpression="pp_description"></asp:BoundField>
-                                   <asp:BoundField DataField="pp_status" HeaderText="Status" SortExpression="status"></asp:BoundField>
+                                    <asp:BoundField DataField="pp_status" HeaderText="Status" SortExpression="status"></asp:BoundField>
                                     <asp:TemplateField>
 
                                         <ItemTemplate>
@@ -156,19 +156,19 @@
                                                     <div class="col-lg-10">
                                                         <asp:Image class="img-fluid" ID="Image1" runat="server" ImageUrl='<%# Eval("pp_img_url") %>' />
                                                     </div>
-                                                    
+
                                                 </div>
-                                                 
+
                                             </div>
                                         </ItemTemplate>
 
                                     </asp:TemplateField>
 
                                 </Columns>
-                              </asp:GridView>
+                            </asp:GridView>
 
-                               <!--Gried view end-->
-                              </div>  
+                            <!--Gried view end-->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -177,60 +177,127 @@
         <!-- Previous add property end -->
 
 
-        <!--previous add property end-->
-
-    <div class="contact section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 offset-lg-4">
-                    <div class="section-heading text-center">
-                        <h6>| Hostel Locations</h6>
-                        <h2>Get In Touch With Our Locations</h2>
+        <!---------------------------------------Student feed---------------------------------->
+        <!--hostel Grid-->
+        <div class="properties section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 offset-lg-4">
+                        <div class="section-heading text-center">
+                            <h6>| Landlord Page </h6>
+                            <h2>Student Feedbacks</h2>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
 
- <!--map section-->
- <div class="contact-content">
-     <div class="container">
-         <div class="row">
-             <div class="col-lg-7">
-                 <!--map-->
-                 <!--map-->
-                 <div id="map" style="width: 1300px; height: 700px; border: 0; border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);"></div>
-                     <script>
-                         // Initialize and add the map
-                         let map;
-                         let currentInfowindow;
+                <!---->
+                <div class="row">
+                    <div class="col-lg-12 col-md-6">
+                        <div class="item text-center">
+                            <!-- Add text-center class here -->
+                            <h4>Message ID Here</h4>
+                            <ul>
+                                <!-- Add Hostel ID input -->
+                                <li>Message ID:
+                              <asp:TextBox runat="server" ID="MessageIDTxtBox" Class="form-control" placeholder="Enter Message ID" />
+                                </li>
+                            </ul>
+                            <div class="main-button">
+                                <!-- Add Font Awesome icons to buttons -->
 
-                         async function initMap() {
-                             // Request needed libraries.
-                             const { Map } = await google.maps.importLibrary("maps");
-                             const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+                                <asp:LinkButton runat="server" ID="ApproveBtn" Text='<span class="fa fa-check"></span> Approve' CssClass="btn" OnClick="StFeedApproveBtn_Click" />
+                                <asp:LinkButton runat="server" ID="RejectBtn" Text='<span class="fa fa-trash"></span> Remove' CssClass="btn " OnClick="StFeedRemoveBtn_Click" />
 
-                             // The map, centered at a default location
-                             map = new Map(document.getElementById("map"), {
-                                 zoom: 15,
-                                 center: { lat: 6.820954288978381, lng: 80.04024112766886 },
-                                 mapId: "DEMO_MAP_ID",
-                                 mapTypeId: 'satellite',
-                             });
 
-                             // Assuming mapLocations is the variable containing location details received from the backend
-                             const locations = mapLocations;
+                            </div>
 
-                             // Loop through the locations array and add markers
-                             locations.forEach(location => {
-                                 const marker = new AdvancedMarkerElement({
-                                     map: map,
-                                     position: { lat: location.lat, lng: location.lng },
-                                     title: location.title,
-                                 });
+                            <!-- Add GridView to display data -->
 
-                                 // Construct the HTML content for the infowindow
-                                 const content = `
+                            <!-- Define your data source and columns here -->
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--Data sources-->
+
+                <!--Data sources end-->
+                <div class="col">
+                    <div class="scrollbar">
+                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString='<%$ ConnectionStrings:nsbmSdtpDBConnectionString2 %>' ProviderName='<%$ ConnectionStrings:nsbmSdtpDBConnectionString2.ProviderName %>' SelectCommand="SELECT * FROM [studentMessages]"></asp:SqlDataSource>
+                        <!--Gried view-->
+                        <asp:GridView class="table table-striped table-bordered" ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="msg_id" DataSourceID="SqlDataSource2">
+                            <Columns>
+                                <asp:BoundField DataField="msg_id" HeaderText="msg_id" ReadOnly="True" InsertVisible="False" SortExpression="msg_id"></asp:BoundField>
+                                <asp:BoundField DataField="student_username" HeaderText="student_username" SortExpression="student_username"></asp:BoundField>
+                                <asp:BoundField DataField="student_email" HeaderText="student_email" SortExpression="student_email"></asp:BoundField>
+                                <asp:BoundField DataField="student_message" HeaderText="student_message" SortExpression="student_message"></asp:BoundField>
+                                <asp:BoundField DataField="status" HeaderText="status" SortExpression="status"></asp:BoundField>
+                            </Columns>
+                        </asp:GridView>
+                        <!--Gried view end-->
+                        <!---->
+                    </div>
+                </div>
+
+                <!--hostel Grid end-->
+                <!-----------------------------------------------------Student Feeds end---------------------------------------->
+
+                <!--previous add property end-->
+
+                <div class="contact section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4 offset-lg-4">
+                                <div class="section-heading text-center">
+                                    <h6>| Hostel Locations</h6>
+                                    <h2>Get In Touch With Our Locations</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--map section-->
+                <div class="contact-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <!--map-->
+                                <!--map-->
+                                <div id="map" style="width: 1300px; height: 700px; border: 0; border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);"></div>
+                                <script>
+                                    // Initialize and add the map
+                                    let map;
+                                    let currentInfowindow;
+
+                                    async function initMap() {
+                                        // Request needed libraries.
+                                        const { Map } = await google.maps.importLibrary("maps");
+                                        const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+                                        // The map, centered at a default location
+                                        map = new Map(document.getElementById("map"), {
+                                            zoom: 15,
+                                            center: { lat: 6.820954288978381, lng: 80.04024112766886 },
+                                            mapId: "DEMO_MAP_ID",
+                                            mapTypeId: 'satellite',
+                                        });
+
+                                        // Assuming mapLocations is the variable containing location details received from the backend
+                                        const locations = mapLocations;
+
+                                        // Loop through the locations array and add markers
+                                        locations.forEach(location => {
+                                            const marker = new AdvancedMarkerElement({
+                                                map: map,
+                                                position: { lat: location.lat, lng: location.lng },
+                                                title: location.title,
+                                            });
+
+                                            // Construct the HTML content for the infowindow
+                                            const content = `
                                               <div id="info-window-content">
                                               <img src="${location.imageUrl}" alt="Image 1" style="max-width: 300px; max-height: 300px;border-radius: 5px; ">
                                               <br><br>
@@ -280,7 +347,7 @@
                              alert('Submitted value: ' + inputValue);
                          }
 
-                     </script>
+                                </script>
                     
                      <!--map-->
 

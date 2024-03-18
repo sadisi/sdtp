@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
+using System.Data;
 using System.Data.Entity;
 using System.Data.SqlClient;
 using System.Diagnostics;
@@ -27,6 +28,8 @@ namespace sdtp
 {
     public partial class HomePage : System.Web.UI.Page
     {
+
+        string connectionString2 = "Data Source=DESKTOP-PAO1EML;Initial Catalog=nsbmSdtpDB;Integrated Security=True";
         protected void Page_Load(object sender, EventArgs e)
         {
             // Retrieve the Google Maps API key from the appSettings section in web.config
@@ -122,11 +125,64 @@ namespace sdtp
                     }
                 }
             }
+
+            //Admin Article
+            BindAdminArticles();
+        }
+
+
+        protected void BindAdminArticles()
+        {
+            string query = "SELECT admin_article FROM adminArticle";
+            DataTable dt = new DataTable();
+            using (SqlConnection connection = new SqlConnection(connectionString2))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    connection.Open();
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    adapter.Fill(dt);
+                }
+            }
+            AdminArticlesRepeater.DataSource = dt;
+            AdminArticlesRepeater.DataBind();
         }
 
 
 
-    
+
+
+        protected void FeedSendBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connectionString2))
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("INSERT INTO studentMessages (student_username, student_email, student_message, status) VALUES (@studentUsername, @emailTxtBox, @messageTxtBox, @status)", con);
+                    cmd.Parameters.AddWithValue("@studentUsername","Visiter");
+                    cmd.Parameters.AddWithValue("@emailTxtBox", emailTxtBox.Text.Trim());
+                    cmd.Parameters.AddWithValue("@messageTxtBox", messageTxtBox.Text.Trim());
+                    cmd.Parameters.AddWithValue("@status", "Unread");
+
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    clearFeilds();
+                }
+                Response.Write("<script>alert('A message was successfully sent. further details, they can contact you via your provided email.')</script>");
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + "');</script>");
+            }
+        }
+
+        void clearFeilds()
+        {
+            emailTxtBox.Text = "";
+            messageTxtBox.Text = "";
+        }
+
 
     }
     

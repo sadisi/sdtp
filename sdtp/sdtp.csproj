@@ -149,11 +149,9 @@
     <Content Include="assets\images\phone-icon.png" />
     <Content Include="assets\images\property-01.jpg" />
     <Content Include="assets\images\property-02.jpg" />
-    <Content Include="assets\images\property-03.jpg" />
     <Content Include="assets\images\property-04.jpg" />
     <Content Include="assets\images\property-05.jpg" />
     <Content Include="assets\images\property-06.jpg" />
-    <Content Include="assets\images\single-property.jpg" />
     <Content Include="assets\images\vilo.png" />
     <Content Include="assets\js\counter.js" />
     <Content Include="assets\js\custom.js" />

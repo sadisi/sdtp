@@ -33,7 +33,7 @@
                 <asp:TextBox runat="server" ID="adminUsername" placeholder="Username"></asp:TextBox>
                 <br>
                 <label for="adminPassword">Password:</label>
-                <asp:TextBox runat="server" ID="adminPassword" TextMode="Password" placeholder="Password"></asp:TextBox>
+                <asp:TextBox runat="server" ID="adminPassword" TextMode="Password" placeholder="Password" ></asp:TextBox>
                 <asp:Button runat="server" ID="adminLoginButton" CssClass="register-btn" Text="Login" OnClick="AdminLogin_click" />
                 <label for="registerLink">Register as Admin:</label>
                 <a href="Registerpage.aspx">Register</a>
@@ -66,10 +66,10 @@
             <!-- Student Login Fields -->
             <div id="studentFields" style="display: none;">
                 <label for="studentUsername">Username:</label>
-                <asp:TextBox runat="server" ID="studentUsername" placeholder="Username"></asp:TextBox>
+                <asp:TextBox runat="server" ID="studentUsername" placeholder="Username" ></asp:TextBox>
                 <br>
                 <label for="studentPassword">Password:</label>
-                <asp:TextBox runat="server" ID="studentPassword" TextMode="Password" placeholder="Password"></asp:TextBox>
+                <asp:TextBox runat="server" ID="studentPassword" TextMode="Password" placeholder="Password" ></asp:TextBox>
                 <asp:Button runat="server" ID="studentLoginButton" CssClass="register-btn" Text="Login"  OnClick="StudentLogin_click" />
                 <br>
                 <label for="registerLink">Register as Student:</label>
@@ -118,6 +118,7 @@
                 studentFields.style.display = 'block';
             }
         }
+
     </script>
 
 

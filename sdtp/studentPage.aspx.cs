@@ -120,12 +120,9 @@ namespace sdtp
             }
 
 
-            // Retrieve admin articles and display them in the adminArticleTxtBox
-          
                 // Retrieve admin articles and bind them to the Repeater
                 BindAdminArticles();
-          
-            //Admin article end
+         
           
 
 
