@@ -226,7 +226,7 @@
             <div class="row">
                 <div class="col-lg-7">
                     <!--map-->
-                    <!--map-->
+                   
                     <div id="map" style="width: 1300px; height: 700px; border: 0; border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);"></div>
                     <script>
                         // Initialize and add the map

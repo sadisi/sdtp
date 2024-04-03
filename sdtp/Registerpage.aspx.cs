@@ -252,7 +252,7 @@ namespace sdtp
 
                     cmd.ExecuteNonQuery();
                     con.Close();
-                    Response.Write("<script>alert('Registered Successfully as an LandLord. Go to the Login page to log in to your account!')</script>");
+                    Response.Write("<script>alert('Registered Successfully as an Warden. Go to the Login page to log in to your account!')</script>");
                 }
                 else
                 {
@@ -341,7 +341,7 @@ namespace sdtp
 
                     cmd.ExecuteNonQuery();
                     con.Close();
-                    Response.Write("<script>alert('Registered Successfully as an LandLord. Go to the Login page to log in to your account!')</script>");
+                    Response.Write("<script>alert('Registered Successfully as an Student. Go to the Login page to log in to your account!')</script>");
                 }
                 else
                 {

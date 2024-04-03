@@ -174,6 +174,8 @@
             // Add your logic here for handling the registration submission
         }
     </script>
+    
 
+    
 
 </asp:Content>
