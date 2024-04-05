@@ -125,12 +125,9 @@
                         <a href="Login.aspx">Login</a>
                     </div>
 
-
-
                 </div>
             </div>
 
-           
         </div>
     </div>
   
@@ -169,9 +166,8 @@
             }
         }
 
-        // Logic to submit the registration form based on user type
         function submitRegistration() {
-            // Add your logic here for handling the registration submission
+       
         }
     </script>
     

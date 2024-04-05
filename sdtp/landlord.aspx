@@ -175,8 +175,6 @@
 
         </div>
         <!-- Previous add property end -->
-
-
         <!---------------------------------------Student feed---------------------------------->
         <!--hostel Grid-->
         <div class="properties section">
@@ -189,8 +187,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!---->
                 <div class="row">
                     <div class="col-lg-12 col-md-6">
                         <div class="item text-center">
@@ -203,41 +199,28 @@
                                 </li>
                             </ul>
                             <div class="main-button">
-                                <!-- Add Font Awesome icons to buttons -->
-
                                 <asp:LinkButton runat="server" ID="ApproveBtn" Text='<span class="fa fa-check"></span> Approve' CssClass="btn" OnClick="StFeedApproveBtn_Click" />
                                 <asp:LinkButton runat="server" ID="RejectBtn" Text='<span class="fa fa-trash"></span> Remove' CssClass="btn " OnClick="StFeedRemoveBtn_Click" />
 
-
                             </div>
-
-                            <!-- Add GridView to display data -->
-
-                            <!-- Define your data source and columns here -->
-
                         </div>
                     </div>
 
                 </div>
-
-                <!--Data sources-->
-
-                <!--Data sources end-->
                 <div class="col">
                     <div class="scrollbar">
                         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString='<%$ ConnectionStrings:nsbmSdtpDBConnectionString2 %>' ProviderName='<%$ ConnectionStrings:nsbmSdtpDBConnectionString2.ProviderName %>' SelectCommand="SELECT * FROM [studentMessages]"></asp:SqlDataSource>
                         <!--Gried view-->
                         <asp:GridView class="table table-striped table-bordered" ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="msg_id" DataSourceID="SqlDataSource2">
                             <Columns>
-                                <asp:BoundField DataField="msg_id" HeaderText="msg_id" ReadOnly="True" InsertVisible="False" SortExpression="msg_id"></asp:BoundField>
-                                <asp:BoundField DataField="student_username" HeaderText="student_username" SortExpression="student_username"></asp:BoundField>
-                                <asp:BoundField DataField="student_email" HeaderText="student_email" SortExpression="student_email"></asp:BoundField>
-                                <asp:BoundField DataField="student_message" HeaderText="student_message" SortExpression="student_message"></asp:BoundField>
-                                <asp:BoundField DataField="status" HeaderText="status" SortExpression="status"></asp:BoundField>
+                                <asp:BoundField DataField="msg_id" HeaderText="Message Id" ReadOnly="True" InsertVisible="False" SortExpression="msg_id"></asp:BoundField>
+                                <asp:BoundField DataField="student_username" HeaderText="Student Username" SortExpression="student_username"></asp:BoundField>
+                                <asp:BoundField DataField="student_email" HeaderText="Student Email" SortExpression="student_email"></asp:BoundField>
+                                <asp:BoundField DataField="student_message" HeaderText="Message" SortExpression="student_message"></asp:BoundField>
+                                <asp:BoundField DataField="status" HeaderText="Status" SortExpression="status"></asp:BoundField>
                             </Columns>
                         </asp:GridView>
                         <!--Gried view end-->
-                        <!---->
                     </div>
                 </div>
 
@@ -264,8 +247,6 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-7">
-                                <!--map-->
-                                <!--map-->
                                 <div id="map" style="width: 1300px; height: 700px; border: 0; border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);"></div>
                                 <script>
                                     // Initialize and add the map
@@ -273,11 +254,11 @@
                                     let currentInfowindow;
 
                                     async function initMap() {
-                                        // Request needed libraries.
+                                        // Request libraries.
                                         const { Map } = await google.maps.importLibrary("maps");
                                         const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
-                                        // The map, centered at a default location
+                                        // map centered at a default location
                                         map = new Map(document.getElementById("map"), {
                                             zoom: 15,
                                             center: { lat: 6.820954288978381, lng: 80.04024112766886 },
@@ -285,10 +266,8 @@
                                             mapTypeId: 'satellite',
                                         });
 
-                                        // Assuming mapLocations is the variable containing location details received from the backend
                                         const locations = mapLocations;
 
-                                        // Loop through the locations array and add markers
                                         locations.forEach(location => {
                                             const marker = new AdvancedMarkerElement({
                                                 map: map,
@@ -296,7 +275,6 @@
                                                 title: location.title,
                                             });
 
-                                            // Construct the HTML content for the infowindow
                                             const content = `
                                               <div id="info-window-content">
                                               <img src="${location.imageUrl}" alt="Image 1" style="max-width: 300px; max-height: 300px;border-radius: 5px; ">
@@ -321,27 +299,20 @@
                                  });
 
                                  marker.addListener('click', function () {
-                                     // Close the current infowindow if one is open
                                      if (currentInfowindow) {
                                          currentInfowindow.close();
                                      }
-
-                                     // Set the current infowindow to the clicked marker's infowindow
                                      currentInfowindow = infowindow;
 
-                                     // Open the infowindow for the clicked marker
                                      infowindow.open(map, marker);
                                  });
 
-                                 // Add marker to the map
                                  marker.setMap(map);
                              });
                          }
 
-                         // Call initMap when the page has loaded
                          window.onload = initMap;
 
-                         // Function to handle button click
                          function submitFunction(inputId) {
                              const inputValue = document.getElementById(inputId).value;
                              alert('Submitted value: ' + inputValue);
@@ -349,7 +320,7 @@
 
                                 </script>
                     
-                     <!--map-->
+                     <!--map end-->
 
                      <div class="row">
                          <div class="col-lg-6">

@@ -18,16 +18,16 @@ namespace sdtp
     {
         String strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
 
-        //page load
+    
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Retrieve the Google Maps API key from the appSettings section in web.config
+            // Retrieve the Google Maps API key from the config
             string googleMapsApiKey = WebConfigurationManager.AppSettings["GoogleMapsApiKey"];
 
             // Register the API key as a startup script variable
             Page.ClientScript.RegisterStartupScript(this.GetType(), "GoogleMapsApiKey", $"var googleMapsApiKey = '{googleMapsApiKey}';", true);
 
-            // Establish connection to the database using the provided connection string
+            // Establish connection to the database
             string connectionString = "Data Source=DESKTOP-PAO1EML;Initial Catalog=nsbmSdtpDB;Integrated Security=True";
 
             // List to store location data retrieved from the database
@@ -78,11 +78,6 @@ namespace sdtp
             // Register the locations as a startup script variable
             Page.ClientScript.RegisterStartupScript(this.GetType(), "MapLocations", $"var mapLocations = {locationsJson};", true);
         }
-
-
-
-        //page load end
-
 
 
         protected void HomePageBtn_Click(object sender, EventArgs e)
@@ -462,7 +457,7 @@ namespace sdtp
                 if (string.IsNullOrWhiteSpace(MessageIDTxtBox.Text))
                 {
                     Response.Write("<script>alert('Please enter a Message ID');</script>");
-                    return; // Exit the method if Hostel ID is empty
+                    return; 
                 }
 
                 SqlConnection con = new SqlConnection(strcon);

@@ -43,16 +43,13 @@ namespace sdtp
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                // Define your SQL query to retrieve data from the database
+                // SQL query to retrieve data from the database
                 string query = "SELECT * FROM LandlordPPtbl WHERE pp_status = 'Active' ";
-
-                // Open the database connection
                 connection.Open();
 
-                // Execute the query and retrieve the data
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    // Execute the query and retrieve the data
+
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         List<object> locations = new List<object>();
@@ -88,16 +85,13 @@ namespace sdtp
             //Hostel GridView
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                // Define your SQL query to retrieve data from the database
-                string query = "SELECT * FROM LandlordPPtbl WHERE pp_status = 'Active'";
 
-                // Open the database connection
+                string query = "SELECT * FROM LandlordPPtbl WHERE pp_status = 'Active'";
                 connection.Open();
 
-                // Execute the query and retrieve the data
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    // Execute the query and retrieve the data
+
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         List<object> properties = new List<object>();

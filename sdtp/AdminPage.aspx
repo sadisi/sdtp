@@ -88,13 +88,8 @@
 
                                 </div>
                             </div>
-                            <!-- Image Upload -->
                             <div class="col-lg-6">
-                                <!-- Your existing image upload code here -->
                             </div>
-                            <!-- End Image Upload -->
-
-
                             <div class="col-lg-3">
                                 <h4>Add Article</h4>
                                 <div class="icon-button">
@@ -138,8 +133,6 @@
             }
         }
     </script>
-
-
     <!--previous add property end-->
 
     <div class="contact section">
@@ -154,10 +147,6 @@
             </div>
         </div>
     </div>
-
-
-
-
 
 
 </asp:Content>

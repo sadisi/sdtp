@@ -194,7 +194,7 @@
                     document.addEventListener('DOMContentLoaded', function () {
                         var propertyContainer = document.getElementById('property-container');
 
-                        // Loop through the properties and generate HTML for each one
+                        // Loop the properties and generate HTML for each one
                         propertyData.forEach(function (property) {
                             propertyContainer.innerHTML += generatePropertyHTML(property);
                         });
@@ -248,8 +248,6 @@
 
                             // Assuming mapLocations is the variable containing location details received from the backend
                             const locations = mapLocations;
-
-                            // Loop through the locations array and add markers
                             locations.forEach(location => {
                                 const marker = new AdvancedMarkerElement({
                                     map: map,

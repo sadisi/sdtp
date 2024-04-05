@@ -56,11 +56,10 @@
                                              You can add your messages here. these messages are send to the Landlord.  Follow these steps to send messages.
                                               <br>
                                              <hr>
-                                             1. Enter your Hostel ID number. 
-                                             <br>
-                                             2. Enter your email.<br>
-                                             3. Enter your message.<br>
-                                             4. Click on send.
+                                           
+                                             1. Enter your email.<br>
+                                             2. Enter your message.<br>
+                                             3. Click on send.
                                              <hr>
                                          </p>
                                          <div class="icon-button">

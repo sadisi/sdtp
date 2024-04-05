@@ -15,15 +15,11 @@
                     </div>
                 </div>
             </div>
-
-            <!---->
             <div class="row">
                 <div class="col-lg-12 col-md-6">
                     <div class="item text-center">
-                        <!-- Add text-center class here -->
                         <h4>Enter Hostel ID here</h4>
                         <ul>
-                            <!-- Add Hostel ID input -->
                             <li>Hostel ID:
                                  <asp:TextBox runat="server" ID="txtHostelIDBox" Class="form-control" placeholder="Enter hostel ID" />
                             </li>
@@ -72,6 +68,7 @@
                     </asp:GridView>
                 </div>
             </div>
+          </div> <!-- This closing div was missing in your code -->
 
             <div class="contact section">
                 <div class="container">
@@ -90,8 +87,6 @@
      <div class="container">
          <div class="row">
              <div class="col-lg-7">
-                 <!--map-->
-                 <!--map-->
                  <div id="map" style="width: 1300px; height: 700px; border: 0; border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);"></div>
                      <script>
                          // Initialize and add the map
@@ -103,7 +98,7 @@
                              const { Map } = await google.maps.importLibrary("maps");
                              const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
-                             // The map, centered at a default location
+                             // The centered
                              map = new Map(document.getElementById("map"), {
                                  zoom: 15,
                                  center: { lat: 6.820954288978381, lng: 80.04024112766886 },
@@ -111,7 +106,6 @@
                                  mapTypeId: 'satellite',
                              });
 
-                             // Assuming mapLocations is the variable containing location details received from the backend
                              const locations = mapLocations;
 
                              // Loop through the locations array and add markers
@@ -122,7 +116,6 @@
                                      title: location.title,
                                  });
 
-                                 // Construct the HTML content for the infowindow
                                  const content = `
                                               <div id="info-window-content">
                                               <img src="${location.imageUrl}" alt="Image 1" style="max-width: 300px; max-height: 300px;border-radius: 5px; ">
@@ -148,15 +141,11 @@
                                      if (currentInfowindow) {
                                          currentInfowindow.close();
                                      }
-
-                                     // Set the current infowindow to the clicked marker's infowindow
                                      currentInfowindow = infowindow;
 
                                      // Open the infowindow for the clicked marker
                                      infowindow.open(map, marker);
                                  });
-
-                                 // Add marker to the map
                                  marker.setMap(map);
                              });
                          }
